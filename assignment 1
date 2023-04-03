@@ -1,0 +1,100 @@
+Q1. Explain with an example each when to use a for loop and a while loop.
+
+## For Loops
+For loops are commonly used when iterating over a sequence of elements, such as a list or an array. 
+The loop variable is assigned to each element of the sequence in turn, and the loop body is executed once for each element. 
+Here's an example of a for loop in Python that prints the elements of a list:
+    my_list = [1, 2, 3, 4, 5]for element in my_list:    print(element)
+In this example, we define a list called `my_list` that contains the integers 1 through 5.
+We then use a for loop to iterate over each element in the list and print it to the console. The loop variable `element` is assigned to each value in the list in turn.
+
+## While Loops
+While loops are used when you don't know how many times the loop should run or when you want to loop until some condition changes from True to False. 
+In a while loop, the loop body is executed repeatedly as long as a specified condition is True. Here's an example of a while loop in Python that calculates the sum of integers from 1 to 10:
+    i = 1sum = 0while i <= 10:    sum += i    i += 1print(sum)
+In this example, we use a while loop to calculate the sum of integers from 1 to 10. We initialize a variable `i` to 1 and 
+a variable `sum` to 0. We then use a while loop to repeatedly add the value of `i` to `sum` until `i` is greater than 10.
+The loop body adds the value of `i` to `sum` and increments `i` by 1 on each iteration.
+
+## When to Use Each Loop
+In general, for loops are used when you know how many times the loop should run, and while loops are used when you don't know how many times the loop should 
+run or when you want to loop until some condition changes from True to False. For loops are also commonly used when iterating over a sequence of elements, such as a list or an array.
+In some cases, either type of loop could be used. However, for loops are generally preferred when iterating over a sequence of elements, as they are more concise and easier to read. While loops are generally
+preferred when you need more control over the loop, such as when you want to break out of the loop early or when you want to loop until a specific condition is met.
+we have discussed the difference between for loops and while loops and when to use each of them. For loops are used when iterating over a sequence of elements, while loops are used when you don't know how many times the loop should run or when you want to loop until some condition changes from True to False. By understanding 
+the differences between these two types of loops, you can choose the right type of loop for your programming needs.
+
+Q2. Write a python program to print the sum and product of the first 10 natural numbers using for
+and while loop.
+Ans: 
+sum = 0
+product = 1
+
+# Loop through the first 10 natural numbers
+for i in range(1, 11):
+    sum += i
+    product *= i
+
+# Print the sum and product
+print("Sum of the first 10 natural numbers:", sum)
+print("Product of the first 10 natural numbers:", product)
+
+Q3. Create a python program to compute the electricity bill for a household.
+The per-unit charges in rupees are as follows: For the first 100 units, the user will be charged Rs. 4.5 per
+unit, for the next 100 units, the user will be charged Rs. 6 per unit, and for the next 100 units, the user will
+be charged Rs. 10 per unit, After 300 units and above the user will be charged Rs. 20 per unit.
+
+You are required to take the units of electricity consumed in a month from the user as input.
+Your program must pass this test case: when the unit of electricity consumed by the user in a month is
+310, the total electricity bill should be 2250.
+Ans: 
+
+units = int(input("Enter the number of units of electricity consumed: "))
+total_bill = 0
+
+if units <= 100:
+    total_bill = units * 4.5
+elif units <= 200:
+    total_bill = 100 * 4.5 + (units - 100) * 6
+elif units <= 300:
+    total_bill = 100 * 4.5 + 100 * 6 + (units - 200) * 10
+else:
+    total_bill = 100 * 4.5 + 100 * 6 + 100 * 10 + (units - 300) * 20
+
+print("Total Electricity Bill: Rs.", total_bill)
+
+Q4. Create a list of numbers from 1 to 100. Use for loop and while loop to calculate the cube of each
+number and if the cube of that number is divisible by 4 or 5 then append that number in a list and print
+that list.
+Ans:
+
+# Create a list of numbers from 1 to 100
+numbers = list(range(1, 101))
+
+# Calculate the cube of each number in the list and append to a new list if divisible by 4 or 5
+cubes = []
+i = 0
+while i < len(numbers):
+    cube = numbers[i] ** 3
+    if cube % 4 == 0 or cube % 5 == 0:
+        cubes.append(numbers[i])
+    i += 1
+
+# Print the list of numbers whose cubes are divisible by 4 or 5
+print("Numbers whose cubes are divisible by 4 or 5:", cubes)
+
+Q5. Write a program to filter count vowels in the below-given string.
+string = "I want to become a data scientist"
+Ans:
+
+# Input string
+string = "i want to become a data scientist"
+
+vowels = "aeiou"
+count = 0
+for char in string:
+   if char in vowels:
+      count += 1
+
+# Call the function and print the count of vowels in the string
+print("Number of vowels in the string:",count)
