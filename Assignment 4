@@ -11,7 +11,7 @@ To create an object of the "Car" class, we first need to define the class, which
 Here's an ex of a simple "Car" class in Python:
 
 class Car:
-    def __init__(self, make, model, year):
+    def __init__(self, make, model, year): 
         self.make = make
         self.model = model
         self.year = year
