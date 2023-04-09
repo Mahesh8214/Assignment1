@@ -1,0 +1,126 @@
+Q1. Explain Class and Object with respect to Object-Oriented Programming. Give a suitable example.
+Ans: 
+In object-oriented programming (OOP), a class is a blueprint for creating objects that share common properties and behavior.
+An object, on the other hand, is an instance of a class that has its own unique set of values for the class's attributes.
+
+Let's take the ex of a class called "Car". 
+The "Car" class might have attributes such as "make," "model," and "year," as well as methods such as "start," "stop," and "accelerate"
+An object of this class would be a specific car, such as a Toyota Camry from the year 2021.
+
+To create an object of the "Car" class, we first need to define the class, which is essentially a blueprint for the object.
+Here's an ex of a simple "Car" class in Python:
+
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+    
+    def start(self):
+        print("The car is starting.")
+    
+    def stop(self):
+        print("The car is stopping.")
+    
+    def accelerate(self):
+        print("The car is accelerating.")
+In this example, the class has three attributes: "make," "model," and "year," as well as three methods: "start," "stop," and "accelerate". 
+The __init__ method is a special method that gets called when a new object is created from the class.
+It initializes the attributes of the object with the values passed in as arguments.
+___________________________________________________________________________________________________________________________________
+
+Q2. Name the four pillars of OOPs.
+Ans:
+     The four pillars of Object-Oriented Programming (OOP) are:
+     1.Encapsulation:Encapsulation is the practice of keeping the implementation details of an object hidden from the outside world, 
+                    and only exposing a public interface through which other objects can interact with it.
+                    This promotes data security and helps to avoid unwanted interference with the object's internal state.
+     2.Abstraction: Abstraction is the process of focusing on the essential features of an object, 
+                    and ignoring or hiding the irrelevant details. This makes the object easier to understand and work with, 
+                    and also makes it more adaptable to changes in the future.
+     3.Inheritance: Inheritance is the ability of an object or class to inherit properties and behavior from a parent object or class.
+                    This allows for the creation of a hierarchy of related objects, with more specific objects inheriting from more general ones.
+     4.Polymorphism: Polymorphism is the ability of objects or methods to take on different forms depending on the context in which they are used.
+                    This allows for greater flexibility and adaptability in the design of an object-oriented system.
+ ___________________________________________________________________________________________________________________________
+
+Q3. Explain why the __init__() function is used. Give a suitable example.
+Ans:
+     object-oriented programming (OOP), the __init__() function is a special method that gets called when a new object is created from a class.
+     It is used to initialize the attributes of the object with the values passed in as arguments.
+    The __init__() method is called a constructor because it constructs or initializes the object.
+    It is used to set the initial values of the object's attributes, so that the object is ready for use as soon as it is created.
+
+   Here's an example of a simple class called "Person" with an __init__() function python:
+   class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+person1 = Person("John", 25)
+ ___________________________________________________________________________________________________________________________
+
+Q4. Why self is used in OOPs?
+Ans: 
+    In Python, the "self" keyword is used to refer to the current instance of a class.
+    It is a way to refer to the attributes and methods of an object within its own class definition.
+    In Python, the first argument of any instance method of a class is always the "self" parameter.
+    When a method is called on an object, the object is automatically passed as the first argument to the method, 
+    so that the method can access the object's attributes and call its methods.
+ ___________________________________________________________________________________________________________________________
+ 
+ Q5. What is inheritance? Give an example for each type of inheritance.
+ Ans:
+     Inheritance is a fundamental concept in object-oriented programming (OOP) that allows one class to inherit properties and methods from another class.
+     The class that inherits from another class is called a subclass or derived class,
+     and the class that is inherited from is called a superclass or base class.
+
+    types of inheritance:
+    Single inheritance: Single inheritance is when a subclass inherits from a single superclass.
+                        It is the most common type of inheritance. For example:
+                        class Animal:
+                          def speak(self):
+                            print("The animal speaks")
+  
+                       class Dog(Animal):
+                          def bark(self):
+                              print("The dog barks")
+
+                      d = Dog()
+                      d.speak()  # prints "The animal speaks"
+                      d.bark()  # prints "The dog barks
+    Multilevel inheritance: Multilevel inheritance is when a subclass inherits from a superclass, 
+                          which in turn inherits from another superclass.
+                          For ex:   class Animal:
+                                      def speak(self):
+                                           print("The animal speaks")
+                                    class Mammal(Animal):
+                                       def feed_baby_with_milk(self):
+                                           print("The mammal feed its baby with milk")
+
+                                    class Dog(Mammal):
+                                        def bark(self):
+                                            print("The dog bark's")
+
+                                      d = Dog()
+                                      d.speak()  # prints "The animal speaks"
+                                      d.feed_baby_with_milk()  # prints "The mammal feeds its baby with milk"
+                                      d.bark()  # prints "The dog bark's")
+  Multiple inheritance: Multiple inheritance is when a subclass inherits from multiple superclasses.
+                        For example:
+                                    class Animal:
+                                        def speak(self):
+                                            print("The animal speaks")
+
+                                    class Mammal:
+                                        def feed_baby_with_milk(self):
+                                            print("The mammal feeds its baby with milk")
+
+                                    class Dog(Animal, Mammal):
+                                        def bark(self):
+                                            print("The dog barks")
+
+                                    d = Dog()
+                                    d.speak()  # prints "The animal speaks"
+                                    d.feed_baby_with_milk()  # prints "The mammal feeds its baby with milk"
+                                    d.bark()  # prints "The dog barks"
+ ___________________________________________________________________________________________________________________________
