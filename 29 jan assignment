@@ -1,0 +1,118 @@
+I. Who developed Python Programming Language?
+Ans: 
+    Python programming language was developed by Guido van Rossum in the late 1980s
+ ___________________________________________________________________________________________________________________________
+
+2. Which type of Programming does Python support?
+Ans: 
+    Object oriented programing language
+___________________________________________________________________________________________________________________________
+
+3. Is Python case sensitive when dealing with identifiers?
+Ans: 
+    python is case sensitive
+ ___________________________________________________________________________________________________________________________
+
+4. What is the correct extension of the Python file?
+Ans: 
+    .py is correct extension
+ ___________________________________________________________________________________________________________________________
+
+5. Is Python code compiled or interpreted?
+Ans: 
+    interpreted
+ ___________________________________________________________________________________________________________________________
+
+6. Name a few blocks of code used to define in Python language?
+Ans: 
+    1. functional block
+    2. conditional block
+    3. loop block
+___________________________________________________________________________________________________________________________
+
+7. State a character used to give single-line comments in Python?
+Ans: 
+    #
+ ___________________________________________________________________________________________________________________________
+
+8. Mention functions which can help us to find the version of python that we are currently working on?
+Ans: 
+    "sys.version"
+___________________________________________________________________________________________________________________________
+
+9. Python supports the creation of anonymous functions at runtime. using a construct called
+Ans: 
+    lambda functions.
+___________________________________________________________________________________________________________________________
+
+10. What does pip stand for python?
+Ans: 
+    PIP stands for "Pip Installs Packages"
+___________________________________________________________________________________________________________________________
+
+11. Mention a few built-in functions in python?
+Ans: 
+    print() - used to print the specified message to the console
+    input() - used to prompt the user to enter a value from the keyboard
+    len() - used to get the length of a string, list, tuple, or dictionary
+    range() - used to generate a sequence of numbers
+    type() - used to get the type of an object
+    int() - used to convert a value to an integer
+    float() - used to convert a value to a floating-point number
+    str() - used to convert a value to a string
+    list() - used to convert a sequence to a list
+    dict() - used to create a dictionary
+___________________________________________________________________________________________________________________________
+
+12. What is the maximum possible length of an identifier in Python?
+Ans: 
+    Identifiers in Python can have an unlimited length
+ ___________________________________________________________________________________________________________________________
+
+13. What are the benefits Of using Python?
+Ans: 
+    Easy to Learn and Use: Python is designed to be easy to learn and use, with a simple and consistent syntax. This makes it an ideal
+                           language for beginners to learn programming.
+    Large Standard Library: Python comes with a large standard library that provides many useful modules and functions, making it easy
+                            to perform various tasks without the need for additional code.
+    Cross-Platform: Python is a cross-platform language, which means that Python code can run on different operating systems, including 
+                    Windows, macOS, and Linux.
+    Open-Source and Free: Python is an open-source language, which means that the source code is available for anyone to use and modify.
+                          It is also free to download and use.
+    Strong Community Support: Python has a large and active community of developers who contribute to its development, create libraries, 
+                              and offer support through forums, mailing lists, and other resources.
+    Versatile: Python is a versatile language that can be used for a variety of applications, including web development, data analysis, 
+               artificial intelligence, machine learning, scientific computing, and more.
+    High Productivity: Python's easy-to-learn syntax, large library, and strong community support make it a highly productive language.
+                       Developers can write code quickly and efficiently, resulting in faster development times and lower costs.
+    Interpreted Language: Python is an interpreted language, which means that code can be executed directly without the need for compilation.
+                          This makes development faster and more efficient.
+ ___________________________________________________________________________________________________________________________
+
+14. How is memory managed in Python?
+Ans: 
+    Memory management in Python is handled automatically through a process called garbage collection. 
+    Python uses a combination of reference counting and a cycle-detecting garbage collector to manage memory.
+    Reference counting is a technique where Python keeps track of the number of references that point to each object. 
+    When an object's reference count drops to zero, it is considered garbage and can be safely deleted.
+ ___________________________________________________________________________________________________________________________
+
+15. How to install Python on Windows and set path variables?
+Ans: 
+   1 Download the latest version of Python from the official website (https://www.python.org/downloads/).
+   2 Run the installer and select "Add Python X.X to PATH" during the installation process.
+   3 Choose the installation directory and click "Install".
+   4 Once the installation is complete, open the "Command Prompt" or "PowerShell" and type "python" to check if Python is installed and working correctly.
+   5 To set the path variables, right-click "This PC" and select "Properties".
+   6 Click "Advanced System Settings" and then "Environment Variables".
+   7 Under "System Variables", find "Path" and click "Edit".
+   8 Click "New" and add the path of the Python installation directory (usually C:\PythonXX\ or C:\Users\username\AppData\Local\Programs\PythonXX).
+  10 Click "OK" on all windows and restart the Command Prompt or PowerShell.
+  11 Type "python" in the Command Prompt or PowerShell to verify that the path variables are set correctly.
+ ___________________________________________________________________________________________________________________________
+
+16. Is indentation required in python?
+Ans: 
+    Yes, indentation is required in Python. In fact, indentation plays a crucial role in determining the structure and flow of the code.
+    Unlike other programming languages, Python uses indentation to mark blocks of code and to define scope.
+ ___________________________________________________________________________________________________________________________
