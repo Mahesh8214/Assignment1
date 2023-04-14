@@ -1,0 +1,81 @@
+Q1. Create a function which will take a list as an argument and return the product of all the numbers
+after creating a flat list.
+Use the below-given list as an argument for your function.
+list1 = [1,2,3,4, [44,55,66, True], False, (34,56,78,89,34), {1,2,3,3,2,1}, {1:34, "key2": [55, 67, 78, 89], 4: (45,
+22, 61, 34)}, [56, 'data science'], 'Machine Learning']
+Note: you must extract numeric keys and values of the dictionary also.
+Ans: 
+        def get_flat_list(*arg):
+            flat_list = []
+            for items in list1:
+                if type(items) == int:
+                    flat_list.append(items)
+                elif type(items) == list:
+                    for sub_item in items:
+                        if type(sub_item) == int:
+                            flat_list.append(sub_item)
+                elif type(items) == str:
+                    pass
+                elif type(items) == tuple:
+                    for sub_item in items:
+                        if type(sub_item) == int:
+                            flat_list.append(sub_item)
+                elif type(items) == set:
+                    for sub_item in items:
+                        if type(sub_item) == int:
+                            flat_list.append(sub_item)
+                elif type(items) == dict:
+                    for sub_item in items:
+                        if type(sub_item) == int:
+                            flat_list.append(sub_item)
+                        if type(items[sub_item]) == int:
+                            flat_list.append(items[sub_item])
+                        if type(sub_item) == str:
+                            pass
+                        if type(items[sub_item]) == list or type(items[sub_item]) == tuple:
+                            for i in items[sub_item]:
+                                flat_list.append(i)
+                elif type(items) == list:
+                    for sub_item in items:
+                        if type(sub_item) == int:
+                            flat_list.append(sub_item)
+                else:
+                    pass
+
+            print(flat_list)
+            value = 1
+            for i in flat_list:
+                value = value * i
+
+            return value
+   output : 
+           [1, 2, 3, 4, 44, 55, 66, 34, 56, 78, 89, 34, 1, 2, 3, 1, 34, 55, 67, 78, 89, 4, 45, 22, 61, 34, 56]
+           4134711838987085478833841242112000
+________________________________________________________________________________________________________________________________
+
+Q2. Write a python program for encrypting a message sent to you by your friend. The logic of encryption
+should be such that, for a the output should be z. For b, the output should be y. For c, the output should
+be x respectively. Also, the whitespace should be replaced with a dollar sign. Keep the punctuation
+marks unchanged.
+Input Sentence: I want to become a Data Scientist.
+Encrypt the above input sentence using the program you just created.
+Note: Convert the given input sentence into lowercase before encrypting. The final output should be
+lowercase.
+Ans :
+          def encrypt_msg(message):
+              encrypted_msg = ""
+              for char in message.lower():
+                  if char == " ":
+                      encrypted_msg += "$"
+                  elif char.isalpha():
+                      encrypted_msg += chr(ord("a") + (25 - (ord(char) - ord("a"))))
+                  else:
+                      encrypted_msg += char
+              return encrypted_msg
+
+          input_sentence = "I want to become a Data Scientist."
+          encrypted_sentence = encrypt_msg(input_sentence)
+          print(encrypted_sentence)
+output:    
+       r$dzmg$gl$yvxlnv$z$wzgz$hxrvmgrhg.
+_______________________________________________________________________________________________________________________________
