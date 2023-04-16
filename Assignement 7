@@ -1,0 +1,46 @@
+Q1. What is Abstraction in OOps? Explain with an example.
+Ans: 
+    In OOP, abstraction refers to obscuring intricate features and displaying only critical information. 
+    It aids in the simplification of code and facilitates its comprehension. 
+    This is frequently accomplished by using abstract classes and interfaces, which specify the shared 
+    characteristics of a collection of objects without revealing specifics about how they were implemented.
+    For instance, we can use abstraction to express the characteristics that all cars have, 
+    including the capacity to accelerate, brake, and turn.
+_________________________________________________________________________________
+Q2. Differentiate between Abstraction and Encapsulation. Explain with an example.
+Ans:
+    Abstraction means showing only the most important information and hiding the rest, 
+    while encapsulation means putting data and methods together and controlling who can access them.
+    Encapsulation keeps things secure, while abstraction helps simplify things.
+    For example, think about a bank account. Abstraction would mean showing the user their balance,
+    but not showing them all the details of how it was calculated or stored. Encapsulation would group together
+    the balance data and methods for depositing and withdrawing money, and only allow authorized parts of the
+    program to access those methods to make sure the balance is updated correctly and safely.
+_________________________________________________________________________________
+
+Q3. What is abc module in python? Why is it used?
+Ans:
+    The abc module in Python is used to create abstract classes.
+    An abstract class is a class that cannot be used on its own, but instead is meant to be subclassed by other classes.
+    You can create an abstract class using the ABC class and the @abstractmethod decorator to indicate which
+    methods must be implemented by any concrete subclasses.
+    Abstract classes are useful for defining interfaces or contracts that other classes must implement. 
+    They can help make code more maintainable by ensuring a common interface or behavior across related classes
+__________________________________________________________________________________
+Q4. How can we achieve data abstraction?
+Ans:
+     Data abstraction in object-oriented programming can be achieved using abstract classes and interfaces.
+     Abstract classes provide a way to define common functionality for a group of related classes, 
+     while interfaces outline the methods that a class must implement. 
+     This approach allows us to hide implementation details and only reveal necessary methods and properties.
+     By doing so, our code becomes more organized, adaptable, and manageable.
+
+________________________________________________________________________________
+
+Q5. Can we create an instance of an abstract class? Explain your answer.
+Ans:
+    Unfortunately, it is not possible to create an instance of an abstract class.
+    An abstract class is one that has one or more abstract methods, or methods without implementation details. 
+    Since an abstract method lacks implementation details, it cannot be invoked directly. So,
+    attempting to construct an instance of an abstract class would result in a runtime error.
+___________________________________________________________________________
