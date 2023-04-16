@@ -37,7 +37,7 @@ Ans:
 
 ________________________________________________________________________________
 
-Q5. Can we create an instance of an abstract class? Explain your answer.
+Q5. Can we create an instance of an abstract class? Explain your answer. 
 Ans:
     Unfortunately, it is not possible to create an instance of an abstract class.
     An abstract class is one that has one or more abstract methods, or methods without implementation details. 
