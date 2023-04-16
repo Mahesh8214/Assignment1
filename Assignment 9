@@ -1,0 +1,91 @@
+Q1. Which function is used to open a file? What are the different modes of opening a file? Explain each mode
+of file opening.
+Ans:
+    open() function is used to open a file in Python. 
+    It's mainly required two arguments, first the file name and then file opening mode.
+    Syntax : file_object = open(filename,'mode')
+    r	Opens a file for reading only. (It's a default mode.)
+    w	Opens a file for writing. (If a file doesn't exist already, then it creates a new file. Otherwise, it's truncate a file.)
+    x	Opens a file for exclusive creation. (Operation fails if a file does not exist in the location.)
+    a	Opens a file for appending at the end of the file without truncating it. (Creates a new file if it does not exist in the location.)
+    t	Opens a file in text mode. (It's a default mode.)
+    b	Opens a file in binary mode.
+    +	Opens a file for updating (reading and writing.)
+_________________________________________________________________________________________________________
+
+Q2. Why close() function is used? Why is it important to close a file?
+Ans:
+    The close() function is used to release system resources that are associated with a file
+    network connection, or any other system resource that was opened using the open() function or similar methods.
+
+    BY not closing files you are possibly wasting system resources. 
+    Also, other processes that want to access the file after your code was 
+    executed might not be able to do so due to still being opened by your code.
+____________________________________________________________________________________________________________
+
+Q3. Write a python program to create a text file. Write ‘I want to become a Data Scientist’ in that file. Then
+close the file. Open this file and read the content of the file.
+Ans:
+      # create a file
+      with open("data_scientist.txt", "w") as f:
+          f.write("I want to become a Data Scientist")
+
+      # open and read the file
+      with open("data_scientist.txt", "r") as f:
+          content = f.read()
+          print(content)
+____________________________________________________________________________________________________________
+
+Q4. Explain the following with python code: read(), readline() and readlines().
+Ans:
+    read(): This method reads the entire contents of a file as a string.
+            f = open("example.txt", "r")
+            content = f.read()
+            print(content)
+            .close()
+            
+    readline(): This method reads one line at a time from a file
+            f = open("example.txt", "r")
+            line1 = file.readline()
+            line2 = file.readline()
+            print(line1)
+            print(line2)
+            file.close()
+   
+   readlines(): This method reads all the lines of a file and returns them as a list
+            f = open("example.txt", "r")
+            lines = f.readlines()
+            for line in lines:
+                print(line)
+            f.close()
+____________________________________________________________________________________________________________
+
+Q5. Explain why with statement is used with open(). What is the advantage of using with statement and
+open() together?
+Ans:
+      In Python, the with statement is used in conjunction with open()
+      function to ensure that a file is properly closed after its usage. 
+      The advantage of using with statement is that it automatically takes care of closing the file, 
+      regardless of whether the code inside the block ran successfully or raised an error.
+      
+      with open('example.txt', 'r') as file:
+      content = file.read()
+      print(content)
+____________________________________________________________________________________________________________
+
+Q6. Explain the write() and writelines() functions. Give a suitable example.
+Ans:
+      The write() function is used to write a single string to a file, 
+      while the writelines() function is used to write a list of strings to a file.
+      
+      Ex using write():
+                        with open('example.txt', 'w') as f:
+                            # Write a string to the file
+                            f.write('This is an example of using write() function.')
+      Ex using writeline():
+                          with open('example.txt', 'w') as f:
+                          # Create a list of strings
+                          lines = ['This is line 1.', 'This is line 2.', 'This is line 3.']
+                          # Write the list of strings to the file
+                          f.writelines(lines)
+____________________________________________________________________________________________________________
