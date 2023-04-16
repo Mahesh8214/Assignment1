@@ -1,0 +1,116 @@
+Q1, Create a vehicle class with an init method having instance variables as name_of_vehicle, max_speed
+and average_of_vehicle.
+Ans:
+        class vehicle:
+            def __init__(self,name_of_vehicle, max_speed,average_of_vehicle):
+                self.name_of_vehicle = name_of_vehicle
+                self.max_speed = max_speed
+                self.average_of_vehicle = average_of_vehicle
+
+        bugati = vehicle("bugati",400,300)
+        print("Name :",bugati.name_of_vehicle)
+        print("Avarage speed :",bugati.average_of_vehicle)
+        print("Max speed",bugati.max_speed)
+output :
+        Name : bugati
+        Avarage speed : 300
+        Max speed 400
+_____________________________________________________________________________________________________________
+
+Q2. Create a child class car from the vehicle class created in Que 1, which will inherit the vehicle class.
+Create a method named seating_capacity which takes capacity as an argument and returns the name of
+the vehicle and its seating capacity.
+Ans:
+      class Car(vehicle):
+          def seating_capacity(self, capacity):
+              return f"{self.name_of_vehicle} has seating capacity : {capacity}"
+      car = Car('Bugati', 180, 25)
+      print(car.seating_capacity(2))
+output :
+`         Bugati has seating capacity : 2
+_____________________________________________________________________________________________________________
+
+Q3. What is multiple inheritance? Write a python code to demonstrate multiple inheritance.
+Ans:
+      A class may inherit attributes and methods from many parent classes in object-oriented programming, 
+      which is a feature. Python allows us to implement numerous parent classes after the name of the 
+      child class to accomplish multiple inheritance.
+      
+      # Python Program to depict multiple inheritance
+      # when method is overridden in both classes
+
+      class Class1:
+        def m(self):
+          print("In Class1")
+
+      class Class2(Class1):
+        def m(self):
+          print("In Class2")
+
+      class Class3(Class1):
+        def m(self):
+          print("In Class3")
+
+      class Class4(Class2, Class3):
+        pass
+
+      obj = Class4()
+      obj.m()
+_____________________________________________________________________________________________________________
+
+Q4. What are getter and setter in python? Create a class and create a getter and a setter method in this
+class.
+Ans:
+      In Python, getter and setter methods are used to access and modify the value of private class attributes
+      Getter methods return the value of the attribute, while setter methods set the value of the attribute after
+      performing some validation or manipulation.
+      
+      class Person:
+      def __init__(self, name, age):
+          self.name = name
+          self.__age = age
+          
+      def get_age(self):
+          return self.__age
+          
+      def set_age(self, new_age):
+          if new_age > 0:
+              self.__age = new_age
+          else:
+              print("Age cannot be negative!")
+              
+        # create an instance of the class
+        p = Person("mahesh", 18)
+        # access the age attribute using the get_age method
+        print(p.get_age()) 
+        
+        # output: 30
+        
+        # set the age attribute using the set_age method
+        p.set_age(40)
+        
+        print(p.get_age())
+        # output: 40
+        # trying to set a negative age
+        p.set_age(-10) 
+        # output: "Age cannot be negative!"
+
+_____________________________________________________________________________________________________________
+
+Q5.What is method overriding in python? Write a python code to demonstrate method overriding.
+Ans:
+    Method overriding is a feature in object-oriented programming that allows a subclass to provide 
+    a different implementation for a method that is already defined in its superclass.
+    
+    class creature:
+    def move(self):
+        print("I can move.")
+
+    class Cat(creature):
+        def move(self):
+            print("I can run and walk.")
+
+    cat = Cat()
+    cat.move()  # output: I can run and walk.
+
+_________________________________________________________________________________________________________
