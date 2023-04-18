@@ -1,0 +1,129 @@
+Q1. Explain why we have to use the Exception class while creating a Custom Exception.
+Note: Here Exception class refers to the base class for all the exceptions.
+Ans :
+      Exception class is the base class for all built-in exceptions.
+      When we create a custom exception, we inherit from this Exception class.
+      By inheriting from the Exception class, our custom exception will have all the standard behavior and properties of a regular exception.
+      Using the Exception class as the base class for our custom exception ensures that our exception is
+      compatible with the existing exception handling mechanisms in Python.
+      For example, we can use the try-except block to catch and handle our custom exception just like any other built-in exception.
+__________________________________________________________________________________________________
+Q2. Write a python program to print Python Exception Hierarchy.
+Ans:
+     exceptions are used to handle errors and other exceptional conditions 
+     that may occur during program execution. The Python language provides a built-in exception hierarchy 
+     that allows you to handle exceptions at different levels of granularity.
+     The exception hierarchy in Python is organized into a tree-like structure,
+     with the base exception class at the top of the tree, and more specific exception classes below it. When an exception is raised, Python checks the hierarchy to see if there is a matching exception class, and if so, it uses that class to handle the exception.
+     Here is a simplified version of the Python exception hierarchy:
+
+BaseException
+SystemExit
+KeyboardInterrupt
+Exception
+StopIteration
+GeneratorExit
+ArithmeticError
+ZeroDivisionError
+FloatingPointError
+OverflowError
+AssertionError
+AttributeError
+EOFError
+ImportError
+ModuleNotFoundError
+
+we can also use help(exception) function to get the hierarchy 
+
+As you can see, the exception hierarchy is organized into several levels of specificity,
+with the base BaseException class at the top, and more specific exception classes like ZeroDivisionError, FileNotFoundError, and TypeError further down.
+By organizing exceptions into a hierarchy, Python allows you to catch 
+specific types of exceptions and handle them in a more granular way, while still providing a catch-all Exception class that can be used to handle any type of exception.
+__________________________________________________________________________________________________
+
+Q3. What errors are defined in the ArithmeticError class? Explain any two with an example.
+Ans:
+     The ArithmeticError class is a build in exception class that is used to handle error that 
+     occur during the arithemetic operaqtion.This class is derived from base EXception class and 
+     include several more specific exception classes that represent different type of arithemetic error 
+     some of them are :
+    1. ZeroDivisionError: This exception is raised when attempting to divide a number by zero. 
+    For example:
+                  a = 10
+                  b = 0
+                  try:
+                      result = a/b
+                  except ZeroDivisionError:
+                      print("Error: division by zero")
+                      
+   In this example, we attempt to divide the number a by b, which is zero.
+   Since division by zero is not defined, a ZeroDivisionError exception is raised. 
+   We handle the exception using a try-except block, which prints an error message 
+   indicating that a division by zero occurred.
+   
+   2 FloatingPointError: This exception is raised when a floating-point 
+   operation fails to produce a valid result. 
+   For example:
+                import math
+                a = -1.0
+                try:
+                    result = math.sqrt(a)
+                except FloatingPointError:
+                    print("Error: invalid operation")
+    we attempt to calculate the square root of a negative number, which is not defined for real numbers.
+    Since this operation fails to produce a valid result, a FloatingPointError exception is
+    raised. We handle the exception using a try-except block, which prints an error message indicating 
+    that an invalid floating-point operation occurred.
+
+   __________________________________________________________________________________________________
+
+Q4. Why LookupError class is used? Explain with an example KeyError and IndexError.
+Ans:
+     the LookupError class is a built-in exception class that is used to handle errors 
+     that occur when attempting to look up a value in a sequence or mapping. 
+     This class is derived from the base Exception class and includes several more 
+     specific exception classes that represent different types of lookup errors.
+     
+     Two common lookup errors in Python are KeyError and IndexError. 
+     Here's an explanation of each, along with an example:
+     
+     1. KeyError: This exception is raised when attempting to access a
+     key in a dictionary that does not exist. For example:
+            my_dict = {'a': 1, 'b': 2, 'c': 3}
+            try:
+                value = my_dict['d']
+            except KeyError:
+                print("Error: key not found")
+ 
+     2. IndexError: This exception is raised when attempting to access an 
+     Index in a sequence (such as a list or tuple) that is out of bounds.
+     For example:
+                my_list = [1, 2, 3]
+                try:
+                    value = my_list[3]
+                except IndexError:
+                    print("Error: index out of range")
+
+__________________________________________________________________________________________________
+
+Q5. Explain ImportError. What is ModuleNotFoundError?
+Ans:
+      ImportError is a built-in exception class that is raised when an import statement fails to import a module. 
+      This can occur for a variety of reasons, such as a missing or invalid module name,
+      a missing or invalid module file, or a failure to find a required dependency.
+      
+      ModuleNotFoundError was added to explicitly indicate that a module could 
+      not be found. This exception is derived from ImportError and raises when 
+      an imported module cannot be found.
+__________________________________________________________________________________________________
+
+Q6. List down some best practices for exception handling in python.
+Ans:
+     some best practices for exception handling in python are as follow :
+      1. use always specific exception instruction 
+      2. print always proper msg 
+      3. always try to log your error by using import logging 
+      4. always avoid to write a multiple exception handling 
+      5. Document all the error or exception 6. cleanup all the resources like closing file
+     
+__________________________________________________________________________________________________
