@@ -1,0 +1,133 @@
+Q1. What is a database? Differentiate between SQL and NoSQL databases.
+Ans:
+      A database is a collection of data that is organized and stored in a way that allows for efficient retrieval
+      and manipulation of that data. SQL and NoSQL are two types of databases that differ in their structure and
+      query language. 
+      
+      The differences between SQL and NoSQL databases are summarized in the following table:
+      1. SQL and NoSQL databases differ in their structure, query language, and scalability. 
+      2. SQL databases are primarily called Relational Databases (RDBMS) and are table-based.
+      3. whereas NoSQL databases are primarily called non-relational or distributed databases and can be document-based.
+      4. key-value pairs, graph databases, or wide-column stores. SQL databases use Structured Query Language (SQL) to define and manipulate data.
+      5. while NoSQL databases do not require a fixed schema and do not use SQL. SQL databases are vertically scalable.
+      6. while NoSQL databases are horizontally scalable.
+____________________________________________________________________________________________________________
+Q2. What is DDL? Explain why CREATE, DROP, ALTER, and TRUNCATE are used with an example.
+Ans:
+      1. DDL stands for Data Definition Language, which is a subset of SQL used to define and manage the structure of a database1234.
+      2. DDL commands include CREATE, DROP, ALTER, and TRUNCATE1234.
+      3. CREATE is used to create a new table in SQL by specifying the table name, column names, and their data types13.
+      4. DROP is used to remove an existing table along with its structure from the database124.
+      5. ALTER is used to modify the structure of an existing table, such as adding or deleting columns124.
+      6.TRUNCATE is used to remove all data from a table without deleting the table structure
+example:
+          # Create a new table
+          conn.execute('''CREATE TABLE employees
+                       (id INT PRIMARY KEY NOT NULL,
+                       name TEXT NOT NULL,
+                       age INT NOT NULL);''')
+          # Add a new column to the table
+          conn.execute('''ALTER TABLE employees
+                       ADD COLUMN salary INT NOT NULL DEFAULT 0;''')
+          # Remove all data from the table
+          conn.execute('''DELETE FROM employees;''')
+          # Remove the table
+          conn.execute('''DROP TABLE employees;''')
+          # Commit the changes
+          conn.commit()
+
+          # Close the connection
+          conn.close()
+____________________________________________________________________________________________________________
+
+Q3. What is DML? Explain INSERT, UPDATE, and DELETE with an example.
+Ans:
+      DML stands for Data Manipulation Language, which is a subset of SQL used to manipulate data in a database.
+      DML commands include INSERT, UPDATE, and DELETE. 
+      Here are some examples of how these commands are used:
+      INSERT: This command is used to insert new data into a table in SQL.
+              For example, "INSERT INTO employees (id, name, age) VALUES (1, 'John', 30);
+              will insert a new row into the "employees" table with the values "1" for "id", "John" for "name", and "30" for "age".
+      UPDATE: This command is used to modify existing data in a table in SQL.
+              For example, "UPDATE employees SET age = 35 WHERE id = 1;" will update the "age" column of the row with "id" equal to "1" in the "employees" table to "35".
+      DELETE: This command is used to delete data from a table in SQL. 
+              For example, "DELETE FROM employees WHERE id = 1;" will delete the row with "id" equal to "1" from the "employees" table.
+____________________________________________________________________________________________________________
+
+Q4. What is DQL? Explain SELECT with an example.
+Ans:
+      DQL stands for Data Query Language, which is a subset of SQL used to retrieve data from a database. 
+      The principal DQL command in SQL is the SELECT command, which retrieves data from one or more tables.
+      Here is an example of how the SELECT command is used:
+      SELECT * FROM employees;
+       # Connect to the database
+      conn = mysql.connector.connect('example.db')
+
+      # Retrieve data from the table
+      cursor = conn.execute("SELECT * FROM employees")
+
+      # Print the data
+      for row in cursor:
+          print(row)
+
+      # Close the connection
+      conn.close()
+____________________________________________________________________________________________________________
+
+Q5. Explain Primary Key and Foreign Key.
+Ans:
+        A primary key is a column or group of columns in a table that uniquely identifies each row in the table. 
+        It is used to ensure data in the specific column is unique and cannot have NULL values.
+        A foreign key is a column or group of columns in a table that provides a link between data in two tables.
+        It is a column (or columns) that references a column (most often the primary key) of another table. 
+        
+    Here are some key differences between primary key and foreign key:
+        1. A primary key uniquely identifies a row in a table, while a foreign key is used to link two tables together by referencing the primary key of one table from another table.
+        2. A table can have only one primary key, while it can have multiple foreign keys.
+        3. The primary key never accepts NULL values, whereas the foreign key may accept multiple NULL values.
+        4. A primary key can be defined at the column or the table level, while a foreign key is always defined at the column level.
+        5. By default, the primary key is a clustered index, and data in the database table is physically organized in the order of the clustered index. However, a foreign key is not a clustered index by default.
+____________________________________________________________________________________________________________
+
+Q6. Write a python code to connect MySQL to python. Explain the cursor() and execute() method.
+Ans:
+          # Connect to the database
+          conn = mysql.connector.connect(
+            host="localhost",
+            user="yourusername",
+            password="yourpassword",
+            database="yourdatabase"
+          )
+
+          # Create a cursor object
+          cursor = conn.cursor()
+
+          # Execute a SQL query
+          cursor.execute("SELECT * FROM employees")
+
+          # Fetch the result set
+          result = cursor.fetchall()
+
+          # Print the result set
+          for row in result:
+            print(row)
+
+          # Close the connection
+          conn.close()
+ The cursor() method creates a cursor object that allows you to execute SQL queries and fetch the results.
+ The execute() method is used to execute a SQL query, and it returns the number of rows affected by the query. 
+ The fetchall() method is used to fetch all rows of the result set, and it returns a list of tuples. 
+____________________________________________________________________________________________________________
+
+Q7. Give the order of execution of SQL clauses in an SQL query.
+Ans:
+      -> The order of execution of SQL clauses in an SQL query is as follows:
+      1. FROM and JOIN: The FROM clause and subsequent JOINs are first executed to determine the total working set of data that is being queried.
+      2. HERE: The WHERE clause is used to filter the data based on specific conditions.
+      3. GROUP BY: The GROUP BY clause is used to group the data based on one or more columns.
+      4. HAVING: The HAVING clause is used to filter the data based on specific conditions after the GROUP BY clause has been applied.
+      5. SELECT: The SELECT clause is used to select the columns that will be returned in the result set.
+      6. DISTINCT: The DISTINCT clause is used to remove duplicates from the result set.
+      7. ORDER BY: The ORDER BY clause is used to sort the result set based on one or more columns.
+      8. LIMIT: The LIMIT clause is used to limit the number of rows returned in the result set.
+____________________________________________________________________________________________________________
