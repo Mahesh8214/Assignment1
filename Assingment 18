@@ -1,0 +1,44 @@
+Q1. What is Web Scraping? Why is it Used? Give three areas where Web Scraping is used to get data.
+Ans:
+    Web scraping is the process of extracting data from websites using automated tools or scripts. 
+    It involves accessing the HTML code of a website and extracting the relevant data from it. 
+    The extracted data can be used for various purposes such as data analysis, research, and marketing.
+    Web scraping is used to extract data from websites that do not provide an API or other means of accessing their data.
+    It is also used to automate data collection from multiple websites, which can save time and effort. Web scraping is commonly used in the following areas:
+      E-commerce: to extract product information, prices, and reviews from e-commerce websites.
+      Research: to extract data for academic research, such as social media data, news articles, and scientific publications.
+      Marketing: to extract data for market research, such as competitor analysis, customer reviews, and pricing information.
+______________________________________________________________________________________________________
+Q2. What are the different methods used for Web Scraping?
+Ans:
+    There are several methods used for web scraping, including:
+    Parsing HTML: This involves using a parser to extract data from the HTML code of a website. The most commonly used parser is Beautiful Soup.
+    Using APIs: Some websites provide APIs that allow developers to access their data. 
+    This method is preferred as it is more efficient and less likely to be blocked by the website.
+    Using web scraping tools: There are several web scraping tools available that can be used to extract data from websites. 
+    These tools typically use a combination of parsing HTML and APIs to extract data.
+______________________________________________________________________________________________________
+Q3. What is Beautiful Soup? Why is it used?
+Ans:
+    Beautiful Soup is a Python library used for web scraping. It is used to parse HTML and XML documents and extract data from them. 
+    Beautiful Soup provides a simple and easy-to-use interface for parsing HTML and XML documents, and it can handle poorly formatted HTML code.
+    Beautiful Soup is used in web scraping to extract data from websites.
+    It is used to navigate the HTML code of a website and extract the relevant data from it.
+    Beautiful Soup is preferred for web scraping as it is easy to use and provides a lot of functionality for parsing HTML and XML documents.
+______________________________________________________________________________________________________
+Q4. Why is flask used in this Web Scraping project?
+Ans:
+    Flask is a Python web framework that is used to build web applications.
+    It is used in this web scraping project to create a web application that can be used to display the scraped data. 
+    Flask provides a simple and easy-to-use interface for building web applications,
+    and it can be used to create a web application that can display the scraped data in a user-friendly way
+______________________________________________________________________________________________________
+Q5. Write the names of AWS services used in this project. Also, explain the use of each service.
+Ans:
+here are some AWS services that could be used in a web scraping project:
+Amazon EC2: This service provides scalable computing capacity in the cloud. It can be used to run web scraping scripts on virtual machines.
+Amazon S3: This service provides object storage in the cloud. It can be used to store the scraped data in a secure and scalable way.
+Amazon RDS: This service provides managed relational databases in the cloud. It can be used to store the scraped data in a structured way.
+Amazon Lambda: This service provides serverless computing in the cloud. It can be used to run web scraping scripts without the need for managing servers.
+Amazon API Gateway: This service provides a fully managed service to create, publish, maintain, monitor, and secure APIs at any scale. It can be used to create APIs for the scraped data.
+______________________________________________________________________________________________________
