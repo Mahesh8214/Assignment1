@@ -1,0 +1,87 @@
+Q1. What is Flask Framework? What are the advantages of Flask Framework?
+Ans:
+    Flask is a lightweight and flexible Python web framework that is used to build web applications.
+    It is a micro-framework that provides a simple and easy-to-use interface for building web applications. 
+    Flask is based on the Werkzeug WSGI toolkit and the Jinja2 template engine, and it is designed to be easy to learn and use.
+    The advantages of Flask Framework are:
+    Lightweight and flexible
+    Easy to learn and use
+    Minimalistic and unopinionated
+    Built-in development server and debugger
+    Support for unit testing
+
+_________________________________________________________________________________________________________
+Q2. Create a simple Flask application to display ‘Hello World!!’. Attach the screenshot of the output in
+Jupyter Notebook.
+Ans:
+      from flask import Flask
+      
+      app = Flask(__name__)
+      
+      @app.route('/')
+      def hello_world():
+          return 'Hello World!!'
+      
+      if __name__ == '__main__':
+          app.run()
+
+output : Hello World!!
+
+_________________________________________________________________________________________________________
+Q3. What is App routing in Flask? Why do we use app routes?
+Ans:
+      App routing in Flask is the process of mapping URLs to view functions in a Flask application. It is used to define the URLs that a user can visit 
+      in a Flask application and the functions that will be executed when the user visits those URLs.
+      We use app routes in Flask to define the URLs that a user can visit in a Flask application and to map those URLs to view functions 
+      that will be executed when the user visits those URLs. 
+      App routing allows us to create a clean and organized URL structure for our Flask application and to separate the logic of our application 
+      into different view functions.
+_________________________________________________________________________________________________________
+Q4. Create a “/welcome” route to display the welcome message “Welcome to ABC Corporation” and a “/”
+route to show the following details:
+Company Name: ABC Corporation
+Location: India
+Contact Detail: 999-999-9999
+Attach the screenshot of the output in Jupyter Notebook.
+Ans:
+      from flask import Flask
+      
+      app = Flask(__name__)
+      
+      @app.route('/')
+      def home():
+          return 'Company Name: ABC Corporation<br>Location: India<br>Contact Detail: 999-999-9999'
+      
+      @app.route('/welcome')
+      def welcome():
+          return 'Welcome to ABC Corporation'
+      
+      if __name__ == '__main__':
+          app.run()
+_________________________________________________________________________________________________________
+Q5. What function is used in Flask for URL Building? Write a Python code to demonstrate the working of the
+url_for() function.
+Ans:
+The url_for() function is used in Flask for URL building. It generates a URL for the specified endpoint with the given method and arguments.
+Here's an example of how to use the url_for() function in Flask
+from flask import Flask, url_for
+
+      app = Flask(__name__)
+      
+      @app.route('/')
+      def home():
+          return 'Home Page'
+      
+      @app.route('/user/<username>')
+      def profile(username):
+          return f'User {username}'
+      
+      @app.route('/post/<int:post_id>')
+      def post(post_id):
+          return f'Post {post_id}'
+      
+      with app.test_request_context():
+          print(url_for('home'))
+          print(url_for('profile', username='John'))
+          print(url_for('post', post_id=1))
+_________________________________________________________________________________________________________
