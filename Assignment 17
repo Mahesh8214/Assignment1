@@ -1,0 +1,30 @@
+Q1. Explain GET and POST methods.
+Ans:
+    GET and POST are HTTP methods used to send data from a client to a server over the internet.
+    GET method is used to retrieve data from a server. It sends a request to the server to retrieve a resource, and the server responds with the requested resource. 
+    GET requests can be cached, bookmarked, and shared, and they are generally considered safe and idempotent, meaning that they do not modify the state of the server
+_______________________________________________________________________________________________________________
+Q2. Why is request used in Flask?
+Ans:
+    The request object in Flask is used to access incoming request data that will be submitted via the HTML form. 
+    It is used to retrieve data from the client-side and to process that data on the server-side.
+    The request object provides access to the data that is submitted via the HTTP request, such as form data, query parameters, and cookies.
+    It is used to retrieve this data and to process it in the Flask application
+_______________________________________________________________________________________________________________
+Q3. Why is redirect() used in Flask?
+Ans:
+    The redirect() function in Flask is used to redirect the client to a different location.
+    It is used to send the client to a different URL after processing a request. 
+    The redirect() function takes a URL as an argument and sends the client to that URL.
+    It is commonly used to redirect the client after processing a form submission or after completing a task.
+_______________________________________________________________________________________________________________
+Q4. What are templates in Flask? Why is the render_template() function used?
+Ans:
+    Templates in Flask are used to generate dynamic HTML pages that can be customized based on the data that is passed to them.
+    They are used to separate the presentation logic from the business logic of the application. 
+    Templates are typically written in HTML and can include placeholders for dynamic data that will be filled in by the Flask application.
+_______________________________________________________________________________________________________________
+Q5. Create a simple API. Use Postman to test it. Attach the screenshot of the output in the Jupyter Notebook.
+Ans:
+      https://salmon-intern-abcue.pwskills.app/lab/tree/work/assignment
+_______________________________________________________________________________________________________________
