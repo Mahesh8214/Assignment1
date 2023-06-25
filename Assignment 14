@@ -1,0 +1,119 @@
+Q1. What is MongoDB? Explain non-relational databases in short. In which scenarios it is preferred to use
+MongoDB over SQL databases?
+Ans:
+    MongoDB:
+    MongoDB is a popular open-source NoSQL document-oriented database system that stores data in JSON-like documents with dynamic schemas.
+    It is designed to be flexible, scalable, and high-performance, making it suitable for a wide range of applications.
+
+    Non-Relational Databases
+    Non-relational databases, also known as NoSQL databases, are databases that do not use the traditional relational database model.
+    Instead, they use a variety of data models, such as key-value, document, column-family, and graph.
+    Non-relational databases are designed to be flexible, scalable, and high-performance, making them suitable for a wide range of applications.
+    They are particularly useful for handling large volumes of unstructured or semi-structured data, such as social media data, sensor data, and log files.
+
+    Scenarios to use MongoDB over SQL databases
+    
+    MongoDB is preferred over SQL databases in the following scenarios:
+    When dealing with large volumes of unstructured or semi-structured data
+    When the data schema is likely to change frequently
+    When the application requires high scalability and performance
+    When the application needs to handle complex queries and aggregations
+_________________________________________________________________________________________________________________________________
+
+Q2. State and Explain the features of MongoDB.
+Ans:
+    Features of MongoDB
+
+    Document-oriented data model
+    Dynamic schema
+    High scalability and performance
+    High availability and fault tolerance
+    Rich query language with support for complex queries and aggregations
+    Flexible indexing and sharding options
+    Support for geospatial data and full-text search
+    Built-in replication and automatic failover
+    Support for ACID transactions in multi-document transactions
+_________________________________________________________________________________________________________________________________
+
+Q3. Write a code to connect MongoDB to Python. Also, create a database and a collection in MongoDB.
+Ans:
+
+    import pymongo
+    
+    # establish a connection to MongoDB
+    client = pymongo.MongoClient("mongodb://localhost:27017/")
+    
+    # create a database
+    mydb = client["mydatabase"]
+    
+    # create a collection
+    mycol = mydb["customers"]
+_________________________________________________________________________________________________________________________________
+
+Q4. Using the database and the collection created in question number 3, write a code to insert one record,
+and insert many records. Use the find() and find_one() methods to print the inserted record.
+Ans:
+
+  # insert one record
+    mydict = { "name": "John", "address": "Highway 37" }
+    x = mycol.insert_one(mydict)
+    
+    # insert many records
+    mylist = [
+      { "name": "Amy", "address": "Apple st 652" },
+      { "name": "Hannah", "address": "Mountain 21" },
+      { "name": "Michael", "address": "Valley 345" },
+      { "name": "Chuck", "address": "Main Road 989" },
+      { "name": "Viola", "address": "Sideway 1633" }
+    ]
+    x = mycol.insert_many(mylist)
+    
+    # print the inserted record using find() method
+    for x in mycol.find():
+      print(x)
+    
+    # print the inserted record using find_one() method
+    x = mycol.find_one()
+    print(x)
+_________________________________________________________________________________________________________________________________
+
+Q5. Explain how you can use the find() method to query the MongoDB database. Write a simple code to
+demonstrate this.
+Ans:
+The find() method is used to query the MongoDB database. It returns a cursor object that can be used to iterate over the results of the query
+   
+     # query the database using find() method
+      myquery = { "address": "Park Lane 38" }
+      mydoc = mycol.find(myquery)
+      
+      # print the results of the query
+      for x in mydoc:
+        print(x)
+_________________________________________________________________________________________________________________________________
+
+Q6. Explain the sort() method. Give an example to demonstrate sorting in MongoDB.
+Ans:
+      The sort() method is used to sort the results of a query in MongoDB. 
+      It takes an optional parameter that specifies the field to sort by and the order of the sort.
+      Here's an example of how to use the sort() method to sort the results of a query in MongoDB:
+      # sort the results of the query by name in ascending order
+      mydoc = mycol.find().sort("name")
+      
+      # print the sorted results of the query
+      for x in mydoc:
+        print(x)
+_________________________________________________________________________________________________________________________________
+
+Q7. Explain why delete_one(), delete_many(), and drop() is used.
+Ans:
+    delete_one(): This method is used to delete a single document that matches the specified criteria. 
+                  It takes a query object as a parameter, which is used to specify the criteria for the deletion.
+                  If multiple documents match the criteria, only the first document is deleted
+    
+    delete_many(): This method is used to delete multiple documents that match the specified criteria. 
+                   It takes a query object as a parameter, which is used to specify the criteria for the deletion.
+                   All documents that match the criteria are deleted
+    
+    drop(): This method is used to drop a collection from the database. It takes no parameters and deletes the entire collection, 
+             including all of its documents
+_________________________________________________________________________________________________________________________________
