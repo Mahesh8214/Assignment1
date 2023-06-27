@@ -5,7 +5,8 @@ Q3. Create a Pandas DataFrame that contains the following data:
 Name :Alice , Bob .Claire
 Age : 25,30,27
 Gender :Female ,Male , Female
-solution in jupiter file name : " 22 feb "
+
+solution in jupiter file name : " 22 feb "  link : https://github.com/Mahesh8214/pw-Assignment-/blob/main/22%20feb%20.ipynb
 
 Then, print the DataFrame.
 Q4. What is ‘DataFrame’ in pandas and how is it different from pandas.series? Explain with an example.
