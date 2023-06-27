@@ -1,0 +1,94 @@
+Q1. Create a Pandas Series that contains the following data: 4, 8, 15, 16, 23, and 42. Then, print the series.
+Q2. Create a variable of list type containing 10 elements in it, and apply pandas.Series function on the
+variable print it.
+Q3. Create a Pandas DataFrame that contains the following data:
+Name :Alice , Bob .Claire
+Age : 25,30,27
+Gender :Female ,Male , Female
+solution in jupiter file name : " 22 feb "
+
+Then, print the DataFrame.
+Q4. What is ‘DataFrame’ in pandas and how is it different from pandas.series? Explain with an example.
+Ans:
+A DataFrame in Pandas is a two-dimensional labeled data structure with columns of potentially different types.
+It can be thought of as a table with rows and columns, similar to a spreadsheet or SQL table. 
+
+A Pandas Series, on the other hand, is a one-dimensional labeled array that can hold data of any type, such as integers, floats, strings, and objects. 
+It can be thought of as a column in a DataFrame. A Series has a one-dimensional index that can be used to access the values in the Series.
+
+    # Create a Pandas Series
+    sr = pd.Series([1, 2, 3, 4, 5])
+    
+    # Create a Pandas DataFrame
+    df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]})
+    
+    # Print the Series and DataFrame
+    print("Pandas Series:")
+    print(sr)
+    print("\n")
+    print("Pandas DataFrame:")
+    print(df)
+This program creates a Pandas Series sr containing integer values and a Pandas DataFrame df containing three columns 'A', 'B', and 'C' with corresponding integer values.
+It then prints the Series and DataFrame using the print() function.
+__________________________________________________________________________________________________________________________________________________________________
+
+Q5. What are some common functions you can use to manipulate data in a Pandas DataFrame? Can
+you give an example of when you might use one of these functions?
+Ans:
+Pandas provides a wide range of functions to manipulate data in a DataFrame. Some of the common functions are:
+head() and tail(): These functions are used to view the first or last n rows of a DataFrame, respectively. 
+                   For example, df.head(10) will show the first 10 rows of the DataFrame df.
+describe(): This function is used to view the summary statistics of the DataFrame, such as count, mean,
+            standard deviation, minimum, and maximum values. For example, df.describe() will show the summary statistics of the DataFrame df.
+groupby(): This function is used to group the data in the DataFrame based on one or more columns and perform aggregate functions on the groups. 
+           For example, df.groupby('column_name').mean() will group the data in the DataFrame df by the values in the column 'column_name' and calculate the mean of each group.
+sort_values(): This function is used to sort the data in the DataFrame based on one or more columns. For example, df.sort_values('column_name') 
+              will sort the data in the DataFrame df based on the values in the column 'column_name
+
+    import pandas as pd
+    import numpy as np
+    
+    # Create a DataFrame with missing values
+    df = pd.DataFrame({'A': [1, 2, np.nan, 4], 'B': [5, np.nan, 7, 8], 'C': [9, 10, 11, np.nan]})
+    
+    # Fill the missing values with the mean of the column
+    df = df.fillna(df.mean())
+    
+    # Print the DataFrame
+    print("Pandas DataFrame:")
+    print(df)
+__________________________________________________________________________________________________________________________________________________________________
+
+Q6. Which of the following is mutable in nature Series, DataFrame, Panel?
+Ans; 
+    The Pandas Series is size immutable, meaning that once created, the size of a Series object cannot be changed. On the other hand, 
+    the Pandas DataFrame is value mutable, meaning that it can be changed. This means that we can add, remove, or modify rows and columns
+    in a DataFrame after it has been created.
+    For example, we can add a new column to a DataFrame using the df['new_column'] = values syntax, where df is the DataFrame and 
+    values is a list or Series of values for the new column.
+    We can also remove a column from a DataFrame using the df.drop('column_name', axis=1) syntax, 
+    where df is the DataFrame and column_name is the name of the column to be removed.
+__________________________________________________________________________________________________________________________________________________________________
+
+Q7. Create a DataFrame using multiple Series. Explain with an example.
+Ans: 
+    To create a DataFrame using multiple Series in Pandas, we can use the pd.concat() function to concatenate the Series along a particular axis.
+    Here's an example Python program that creates two Series and combines them into a DataFrame using pd.concat()
+    
+        import pandas as pd
+        
+        # Create two Pandas Series
+        sr1 = pd.Series(['php', 'python', 'java', 'c', 'c++'])
+        sr2 = pd.Series([1, 2, 3, 4, 5])
+        
+        # Combine the Series into a DataFrame using pd.concat()
+        df = pd.concat([sr1, sr2], axis=1)
+        
+        # Print the DataFrame
+        print("Pandas DataFrame:")
+        print(df)
+    This program creates two Pandas Series sr1 and sr2 containing string and integer values, respectively.
+    It then uses the pd.concat() function to concatenate the Series along the columns axis (axis=1) and create a DataFrame df.
+    The resulting DataFrame has two columns, one for each Series.
+__________________________________________________________________________________________________________________________________________________________________
+Finally, the program prints the DataFrame using the print() function
