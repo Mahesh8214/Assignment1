@@ -1,0 +1,145 @@
+Q1. What is the Probability density function?
+Ans: The PDF is used to describe the probability distribution of a continuous random variable.
+     It tells us the relative likelihood of observing different values or ranges of values for the variable.
+     The PDF is represented by a function, denoted as f(x), where x is the variable.
+     The function assigns probabilities to different outcomes within the range of the variable.
+     The PDF is always non-negative, meaning it cannot have negative probabilities
+_________________________________________________________________________________________________________________
+
+Q2. What are the types of Probability distribution?
+Ans: Types of the common probility distribution are :
+-> Uniform Distribution
+-> Normal Distribution ( orGaussian Distribution)
+-> Binomial Distribution
+-> Poisson Distribution
+-> Exponential Distribution
+-> Bernoulli Distribution
+-> Student's t-Distribution
+-> Log-Normal Distribution
+
+_________________________________________________________________________________________________________________
+
+Q3. Write a Python function to calculate the probability density function of a normal distribution with
+given mean and standard deviation at a given point.
+Ans:
+
+    import math
+    def calculate_pdf(x, mean, std_dev):
+        cf = 1 / (std_dev * math.sqrt(2 * math.pi))
+        exponent = -((x - mean) ** 2) / (2 * std_dev ** 2)
+        pdf = cf * math.exp(exponent) #cf for cofficient
+        return pdf
+
+_________________________________________________________________________________________________________________
+
+Q4. What are the properties of Binomial distribution? Give two examples of events where binomial
+distribution can be applied.
+Ans:
+
+The Binomial distribution has several properties that make it a valuable tool in probability and statistics. 
+The properties of the Binomial distribution are as follows:
+
+Fixed Number of Trials: The Binomial distribution models a fixed number, denoted as n, of independent and
+                        identical trials or experiments.
+Two Possible Outcomes: Each trial in the Binomial distribution can have only two possible outcomes, 
+                        often referred to as success (S) and failure (F).
+Constant Probability: The probability of success, denoted as p, remains constant for each trial.
+                      Similarly, the probability of failure, denoted as q = 1 - p, also remains constant.
+Independence: The trials or experiments in the Binomial distribution are assumed to be independent of each other.
+              The outcome of one trial does not affect the outcomes of other trials.
+Counting Successes: The Binomial distribution focuses on counting the number of successes, denoted as X,
+                    that occur in the fixed number of trials (n).
+Probability Mass Function: The probability mass function (PMF) of the Binomial distribution gives the 
+                           probability of obtaining a specific number of successes in the given number of trials.
+
+Example 1: Flipping Coins
+Example 2: Quality Control
+_________________________________________________________________________________________________________________
+
+Q5. Generate a random sample of size 1000 from a binomial distribution with probability of success 0.4
+and plot a histogram of the results using matplotlib.
+Ans:
+      import numpy as np
+      import matplotlib.pyplot as plt
+      n = 1000  # Sample size
+      p = 0.4  # Probability of success
+      
+      # Generate random binomial sample 
+      sample = np.random.binomial(n, p, size=n)
+      
+      # Plot histogram
+      plt.hist(sample, bins=20, edgecolor='black')
+      plt.xlabel('Number of Successes')
+      plt.ylabel('Frequency')
+      plt.title('Histogram of Binomial Distribution')
+      plt.show()
+
+_________________________________________________________________________________________________________________
+
+Q6. Write a Python function to calculate the cumulative distribution function of a Poisson distribution
+with given mean at a given point.
+Ans:
+
+    import math
+    
+    def calculate_poisson_cdf(k, mean):
+        cdf = 0.0
+        for i in range(k + 1):
+            cdf += math.exp(-mean) * (mean ** i) / math.factorial(i)
+        return cdf
+
+_________________________________________________________________________________________________________________
+
+Q7. How Binomial distribution different from Poisson distribution?
+Ans:
+
+Nature of Events:
+Binomial Distribution: The Binomial distribution models a fixed number of independent and identical trials or experiments, where each trial has two possible outcomes (success or failure).
+Poisson Distribution: The Poisson distribution models the number of events occurring within a fixed interval of time or space, where events happen randomly and independently.
+Number of Outcomes:
+
+Binomial Distribution: The Binomial distribution has two possible outcomes for each trial (success or failure).
+Poisson Distribution: The Poisson distribution is a discrete distribution that represents the number of occurrences of an event in a given interval. The number of events can range from 0 to infinity.
+
+Probability Parameters:
+Binomial Distribution: The Binomial distribution has two parameters: the number of trials (n) and the probability of success in each trial (p).
+Poisson Distribution: The Poisson distribution has one parameter: the average rate or mean number of events (λ) occurring in the given interval.
+
+Assumptions:
+Binomial Distribution: The Binomial distribution assumes a fixed number of trials, independence between trials, constant probability of success, and a binary outcome for each trial.
+Poisson Distribution: The Poisson distribution assumes events occur randomly and independently within a fixed interval, with the average rate of occurrence remaining constant.
+
+Applications:
+Binomial Distribution: The Binomial distribution is commonly used to model events with a fixed number of trials and two possible outcomes, such as coin flips, pass/fail rates, or success/failure experiments.
+Poisson Distribution: The Poisson distribution is often used to model the occurrence of rare events over a fixed interval, such as the number of calls received at a call center within a specific time frame, the number of accidents in a day
+_________________________________________________________________________________________________________________
+
+Q8. Generate a random sample of size 1000 from a Poisson distribution with mean 5 and calculate the
+sample mean and variance.
+Ans:
+
+    import numpy as np
+    sample_size = 1000
+    mean = 5
+    
+    sample = np.random.poisson(mean, size=sample_size)
+    
+    # Calculate sample mean and variance
+    sample_mean = np.mean(sample)
+    sample_variance = np.var(sample)
+    
+    # Print the results
+    print("Sample Mean:", sample_mean)
+    print("Sample Variance:", sample_variance)
+_________________________________________________________________________________________________________________
+Q9. How mean and variance are related in Binomial distribution and Poisson distribution?
+Ans:
+    In the Binomial distribution, the variance depends on both the number of trials and 
+    the probability of success, while in the Poisson distribution, the variance is solely determined by the mean value
+_________________________________________________________________________________________________________________
+Q10. In normal distribution with respect to mean position, where does the least frequent data appear?
+Ans:
+  The normal distribution is symmetric, with the mean located at the center of the distribution. 
+  The tails of the distribution extend infinitely in both directions. The data points in the tails are 
+  less frequent because they represent extreme values that are farther away from the mean.
+_________________________________________________________________________________________________________________
