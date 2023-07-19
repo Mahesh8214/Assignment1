@@ -1,0 +1,87 @@
+Q1. Calculate the 95% confidence interval for a sample of data with a mean of 50 and a standard deviation
+of 5 using Python. Interpret the results.
+Ans:
+________________________________________________________________________________________________________________
+Q2. Conduct a chi-square goodness of fit test to determine if the distribution of colors of M&Ms in a bag
+matches the expected distribution of 20% blue, 20% orange, 20% green, 10% yellow, 10% red, and 20%
+brown. Use Python to perform the test with a significance level of 0.05.
+Ans:
+________________________________________________________________________________________________________________
+
+Q3. Use Python to calculate the chi-square statistic and p-value for a contingency table with the following
+data:
+           Group A   Group B
+Outcome 1     20       15
+Outcome 2     10       25
+Outcome 3     15       20
+Interpret the results of the test.
+Ans:
+________________________________________________________________________________________________________________
+
+Q4. A study of the prevalence of smoking in a population of 500 individuals found that 60 individuals
+Ans:
+________________________________________________________________________________________________________________
+
+smoked. Use Python to calculate the 95% confidence interval for the true proportion of individuals in the
+population who smoke.
+Ans:
+________________________________________________________________________________________________________________
+
+Q5. Calculate the 90% confidence interval for a sample of data with a mean of 75 and a standard deviation
+of 12 using Python. Interpret the results.
+Ans:
+________________________________________________________________________________________________________________
+
+Q6. Use Python to plot the chi-square distribution with 10 degrees of freedom. Label the axes and shade the
+area corresponding to a chi-square statistic of 15.
+Ans:
+________________________________________________________________________________________________________________
+
+Q7. A random sample of 1000 people was asked if they preferred Coke or Pepsi. Of the sample, 520
+preferred Coke. Calculate a 99% confidence interval for the true proportion of people in the population who
+prefer Coke.
+Ans:
+________________________________________________________________________________________________________________
+
+Q8. A researcher hypothesizes that a coin is biased towards tails. They flip the coin 100 times and observe
+45 tails. Conduct a chi-square goodness of fit test to determine if the observed frequencies match the
+expected frequencies of a fair coin. Use a significance level of 0.05.
+Ans:
+________________________________________________________________________________________________________________
+
+Q9. A study was conducted to determine if there is an association between smoking status (smoker or
+non-smoker) and lung cancer diagnosis (yes or no). The results are shown in the contingency table below.
+Conduct a chi-square test for independence to determine if there is a significant association between
+smoking status and lung cancer diagnosis.
+
+           Lung Cancer: Yes  Lung Cancer: No
+Smoker           60               140
+Non-smoker       30               170
+Use a significance level of 0.05.
+
+Ans:
+    
+________________________________________________________________________________________________________________
+
+Q10. A study was conducted to determine if the proportion of people who prefer milk chocolate, dark
+chocolate, or white chocolate is different in the U.S. versus the U.K. A random sample of 500 people from
+the U.S. and a random sample of 500 people from the U.K. were surveyed. The results are shown in the
+contingency table below. Conduct a chi-square test for independence to determine if there is a significant
+association between chocolate preference and country of origin.
+
+              Milk Chocolate  Dark Chocolate  White Chocolate
+
+U.S. (n=500)     200               150            150
+U.K. (n=500)     225               175            100
+
+Use a significance level of 0.01.
+Ans:
+________________________________________________________________________________________________________________
+
+Q11. A random sample of 30 people was selected from a population with an unknown mean and standard
+deviation. The sample mean was found to be 72 and the sample standard deviation was found to be 10.
+Conduct a hypothesis test to determine if the population mean is significantly different from 70. Use a
+significance level of 0.05.
+
+Ans:
+________________________________________________________________________________________________________________
