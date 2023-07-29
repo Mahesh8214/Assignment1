@@ -9,7 +9,7 @@ Q1: Define overfitting and underfitting in machine learning. What are the conseq
   in the training data. It fails to learn important relationships, resulting in poor performance on both training and test data.
   Consequences: Poor accuracy, low complexity, and an inability to capture relevant patterns.
 
-To mitigate overfitting and underfitting, the following strategies can be used:
+To mitigate overfitting and underfitting, the following strategies can be used: 
 
 - Overfitting mitigation:
   a) Use more training data to expose the model to a wider range of examples.
