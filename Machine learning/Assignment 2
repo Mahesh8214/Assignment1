@@ -1,0 +1,130 @@
+Q1: Define overfitting and underfitting in machine learning. What are the consequences of each, and how can they be mitigated?
+
+- Overfitting: Overfitting occurs when a machine learning model learns too much from the training data and captures noise or
+  random fluctuations instead of general patterns. As a result, the model performs well on the training data but poorly
+  on unseen data (test data).
+  Consequences: Reduced generalization, high variance, and poor performance on new data.
+
+- Underfitting: Underfitting happens when a machine learning model is too simple to capture the underlying patterns 
+  in the training data. It fails to learn important relationships, resulting in poor performance on both training and test data.
+  Consequences: Poor accuracy, low complexity, and an inability to capture relevant patterns.
+
+To mitigate overfitting and underfitting, the following strategies can be used:
+
+- Overfitting mitigation:
+  a) Use more training data to expose the model to a wider range of examples.
+  b) Feature selection or engineering to reduce the complexity of the model.
+  c) Cross-validation to tune hyperparameters and find the best model configuration.
+  d) Regularization techniques to add penalties for complexity during training.
+
+- Underfitting mitigation:
+  a) Use more relevant features or improve data quality to increase the model's complexity.
+  b) Select a more powerful model that can capture complex relationships.
+  c) Adjust hyperparameters to allow the model to better fit the data.
+  d) Perform more feature engineering to provide the model with more meaningful information.
+_________________________________________________________________________________________________________________________________________
+
+Q2: How can we reduce overfitting? Explain in brief.
+
+To reduce overfitting, you can employ the following techniques:
+
+- Cross-validation: Split the data into multiple folds and use them for training and validation.
+  This helps in selecting the best model and prevents overfitting.
+
+- Regularization: Introduce penalties for complex models during training to discourage the model from overfitting the data.
+
+- Data augmentation: Increase the size of the training dataset by applying transformations to existing data, 
+  making the model generalize better.
+
+- Early stopping: Monitor the model's performance during training and stop the process when it starts overfitting the training data.
+_________________________________________________________________________________________________________________________________________
+
+Q3: Explain underfitting. List scenarios where underfitting can occur in ML.
+
+Underfitting occurs when a machine learning model is too simplistic to capture the underlying patterns in the data.
+It fails to learn the relationships between the input features and the target variable, leading to poor performance on
+both training and test data.
+
+Scenarios where underfitting can occur:
+- Using a linear model to fit a nonlinear relationship between features and target.
+- Using very few features to train a complex problem.
+- Training a model with insufficient training data.
+- Setting overly strict regularization penalties, leading to an excessively simple model.
+_________________________________________________________________________________________________________________________________________
+
+Q4: Explain the bias-variance tradeoff in machine learning. What is the relationship between bias and variance, and 
+    how do they affect model performance?
+
+The bias-variance tradeoff is a fundamental concept in machine learning that deals with finding the right balance between bias and variance in a model.
+
+- Bias: Bias refers to the error introduced by approximating a real-world problem with a simplified model. High bias models tend to underfit, 
+        as they oversimplify the data.
+
+- Variance: Variance refers to the model's sensitivity to the fluctuations in the training data. High variance models tend to overfit, 
+            as they capture noise and perform well on the training data but poorly on unseen data.
+
+The relationship between bias and variance is inversely proportional. As you decrease bias, variance increases, and vice versa. 
+The challenge is to strike a balance to achieve the best generalization on unseen data.
+
+Q5: Discuss some common methods for detecting overfitting and underfitting in machine learning models. 
+    How can you determine whether your model is overfitting or underfitting?
+
+- Methods for detecting overfitting:
+  a) Hold-out validation: Split the data into training and validation sets. If the model performs significantly better
+     on the training data than the validation data, it may be overfitting.
+  b) Learning curves: Plot the model's performance on both training and validation data against the number of training samples.
+     Overfitting is indicated by a significant performance gap between the two curves.
+  c) Cross-validation: Repeatedly train and validate the model on different subsets of the data. If performance varies widely, 
+     the model may be overfitting.
+
+- Methods for detecting underfitting:
+  a) Similar approaches to overfitting detection can be used. If the model performs poorly on both the training and validation data, 
+     it may be underfitting.
+  b) Learning curves can also help identify underfitting. If both training and validation performance plateau at a low level, 
+     the model is likely underfitting.
+_________________________________________________________________________________________________________________________________________
+
+Q6: Compare and contrast bias and variance in machine learning. What are some examples of high bias and high variance models, 
+    and how do they differ in terms of their performance?
+
+- High Bias:
+  - Underfitting occurs due to high bias.
+  - The model is too simplistic and fails to capture the underlying patterns in the data.
+  - It performs poorly on both the training and test data.
+  - Examples: Linear regression on a nonlinear problem, single decision tree on a complex dataset.
+
+- High Variance:
+  - Overfitting occurs due to high variance.
+  - The model is overly complex and captures noise or random fluctuations in the training data.
+  - It performs well on the training data but poorly on new, unseen data.
+  - Examples: Deep neural networks with excessive layers on a small dataset, high-degree polynomial regression on limited data.
+_________________________________________________________________________________________________________________________________________
+
+Q7: What is regularization in machine learning, and how can it be used to prevent overfitting? 
+    Describe some common regularization techniques and how they work.
+
+- Regularization is a technique used to prevent overfitting in machine learning models by adding penalty terms for model complexity during training.
+
+Common regularization techniques include:
+
+1. L1 Regularization (Lasso):
+   - Adds the absolute value of the model's coefficients as a penalty term.
+   - Encourages sparsity and sets some coefficients to exactly zero.
+   - Helps with feature selection.
+
+2. L2 Regularization (Ridge):
+   - Adds the squared value of the model's coefficients as a penalty term.
+   - Encourages small but non-zero coefficients.
+   - Helps reduce the impact of less relevant features.
+
+3. Dropout (for neural networks):
+   - Randomly deactivates a fraction of neurons during each training iteration.
+   - Prevents co-adaptation of neurons and improves generalization.
+
+4. Elastic Net:
+   - Combines L1 and L2 regularization to leverage their respective benefits.
+   - Helps to address the limitations of L1 and L2 regularization individually.
+
+Regularization helps prevent overfitting by discouraging the model from fitting noise in the training data and 
+promoting a simpler model with better generalization capabilities.
+_________________________________________________________________________________________________________________________________________
