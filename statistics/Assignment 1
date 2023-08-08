@@ -1,0 +1,110 @@
+QI. What is Statistics?
+Ans: 
+    Statistics is a branch of mathematics that involves collecting, organizing, analyzing, interpreting,
+    and presenting data. It provides methods and techniques for making sense of numerical information
+    to draw conclusions, make predictions, and support decision-making in various fields, such as science,
+    economics, social sciences, and more.
+____________________________________________________________________________________________________
+
+Q2. Define the different types of statistics and give an example of when each type might be used.
+Ans:
+-> The two main types of statistics: descriptive statistics and inferential statistics.
+
+    1. Descriptive Statistics: These methods are used to summarize and describe data without drawing any
+    conclusions beyond the data itself. Examples include mean, median, mode, range, and standard deviation.
+    For instance, calculating the average (mean) age of students in a class is a descriptive statistic.
+    
+    2. Inferential Statistics: These methods involve making inferences or predictions about a larger
+    population based on a sample of data. Examples include hypothesis testing, regression analysis, 
+    and confidence intervals. For instance, determining whether a new drug has a significant effect 
+    on reducing blood pressure using a sample of patients is an inferential statistic.
+____________________________________________________________________________________________________
+
+Q3. What are the different types of data and how do they differ from each other? Provide an example of
+each type of data.
+Ans: 
+->There are two main types of data: quantitative data and qualitative data.
+
+    1. Quantitative Data: This type of data consists of numerical measurements or quantities that 
+    can be subjected to mathematical operations. Examples include heights, ages, temperatures, and test scores.
+    
+    2. Qualitative Data: Also known as categorical data, this type of data represents categories or labels 
+    and cannot be measured with numerical values. Examples include gender, color, type of fruit, and 
+    educational level.
+____________________________________________________________________________________________________
+
+Q4. Categorise the following datasets with respect to quantitative and qualitative data types:
+(i) Grading in exam: A+, A, B+, B, C+, C, D, E
+(ii) Colour of mangoes: yellow, green, orange, red
+(iii) Height data of a class: [178.9, 179, 179.5, 176, 177.2, 178.3, 175.8,...1
+(iv) Number of mangoes exported by a farm: [500, 600, 478, 672. ...l
+Ans: 
+    (i) Grading in exam: Qualitative (ordinal) data.
+    (ii) Colour of mangoes: Qualitative (nominal) data.
+    (iii) Height data of a class: Quantitative (continuous) data.
+    (iv) Number of mangoes exported by a farm: Quantitative (discrete) data.
+____________________________________________________________________________________________________
+
+Q5. Explain the concept of levels of measurement and give an example of a variable for each level.
+Ans: 
+    There are four levels of measurement: nominal, ordinal, interval, and ratio.
+
+    1. Nominal: Categories with no inherent order, like gender or colors.
+    2. Ordinal: Categories with a meaningful order but no consistent differences between values,
+                like rating scales (e.g., satisfaction levels: "Very Satisfied," "Satisfied," "Neutral," etc.).
+    3. Interval: Ordered categories with consistent differences between values but no true zero point,
+                 like temperature in Celsius or Fahrenheit.
+    4. Ratio: Ordered categories with consistent differences and a meaningful zero point, like height,
+               weight, and income
+____________________________________________________________________________________________________
+
+Q6. Why is it important to understand the level of measurement when analyzing data? Provide an
+example to illustrate your answer.
+Ans: 
+    Understanding levels of measurement is important because it determines the appropriate statistical
+    methods that can be applied to the data. Using the wrong method can lead to incorrect conclusions.
+    For example, calculating the average of temperature in Celsius (interval data) and interpreting it 
+    as having twice the magnitude as another temperature is not valid due to the absence of a true 
+    zero point.
+____________________________________________________________________________________________________
+
+Q7. How nominal data type is different from ordinal data type.
+Ans: 
+    Nominal data represents categories with no inherent order, while ordinal data represents 
+    categories with a meaningful order. In nominal data, the categories are distinct and cannot
+    be ranked, whereas in ordinal data, the categories can be ranked but the differences between
+    ranks may not be uniform or meaningful.
+____________________________________________________________________________________________________
+
+Q8. Which type of plot can be used to display data in terms of range?
+Ans: 
+    A box plot (box-and-whisker plot) is commonly used to display the range of a dataset,
+    showing the minimum, first quartile, median, third quartile, and maximum values.
+    It provides a visual representation of the spread and central tendency of the data.
+____________________________________________________________________________________________________
+
+Q9. Describe the difference between descriptive and inferential statistics. Give an example of each
+type of statistics and explain how they are used.
+Ans: 
+   1. Descriptive Statistics: These summarize and describe data, providing insights into its 
+    characteristics. For example, calculating the average income of a group describes their earning patterns.
+
+   2. Inferential Statistics: These involve drawing conclusions about a larger population based on 
+    a sample. For instance, using inferential statistics, you might determine whether a new marketing 
+    strategy will be effective for a whole target audience based on its effectiveness with a smaller sample.
+____________________________________________________________________________________________________
+
+QIO. What are some common measures of central tendency and variability used in statistics? Explain
+how each measure can be used to describe a dataset.
+Ans:
+   Central Tendency: These measures describe the center of a dataset.
+
+        Mean: The average of all values.
+        Median: The middle value when data is arranged in order.
+        Mode: The most frequently occurring value.
+        Variability: These measures describe the spread or dispersion of data.
+        
+        Range: The difference between the maximum and minimum values.
+        Variance: The average of squared deviations from the mean.
+        Standard Deviation: The square root of the variance, indicating average deviation from the mean.
+____________________________________________________________________________________________________
