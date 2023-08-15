@@ -1,0 +1,49 @@
+Q1. What is data encoding? How is it useful in data science?
+Data encoding refers to the process of converting categorical data (text-based labels or values) into numerical values that can be used in machine learning algorithms. It's useful in data science because many machine learning algorithms work with numerical data. Encoding categorical data allows these algorithms to process and analyze the data effectively, as they often require numerical inputs.
+___________________________________________________________________________________________________________________________________________
+
+Q2. What is nominal encoding? Provide an example of how you would use it in a real-world scenario.
+Nominal encoding, also known as label encoding, assigns a unique numerical value to each category in a categorical feature. For instance, if you have a "Color" feature with categories like "Red," "Green," and "Blue," you could encode them as 0, 1, and 2, respectively.
+
+Example: Let's say you're analyzing survey data, and one of the features is "Education Level" with categories "High School," "Bachelor's," "Master's," and "Ph.D." You can use nominal encoding to transform these categories into numerical values: 0, 1, 2, and 3.
+___________________________________________________________________________________________________________________________________________
+
+Q3. In what situations is nominal encoding preferred over one-hot encoding? Provide a practical example.
+Nominal encoding is preferred when the categorical variable has an inherent ordinal relationship or when the variable has a large number of unique categories. For example, if you have a "Temperature" feature with categories "Cold," "Warm," and "Hot," there's a clear ordinal relationship, and nominal encoding could capture this relationship.
+___________________________________________________________________________________________________________________________________________
+
+Q4. Suppose you have a dataset containing categorical data with 5 unique values. Which encoding technique would you use to transform this data into a format suitable for machine learning algorithms? Explain why you made this choice.
+If the categorical data has no inherent ordinal relationship and the number of unique values is not too large, you could use nominal encoding (label encoding) to convert the categories into numerical values. This choice is suitable when there's no specific order among the categories, and the numerical values don't imply any magnitude or relationship.
+___________________________________________________________________________________________________________________________________________
+
+Q5. In a machine learning project, you have a dataset with 1000 rows and 5 columns. Two of the columns
+are categorical, and the remaining three columns are numerical. If you were to use nominal encoding to
+transform the categorical data, how many new columns would be created? Show your calculations.
+Ans:
+If we use nominal encoding to transform two categorical columns with 5 unique values each, you would create a new column for each categorical column. This would result in 2 new columns.
+___________________________________________________________________________________________________________________________________________
+
+Q6. You are working with a dataset containing information about different types of animals, including their
+species, habitat, and diet. Which encoding technique would you use to transform the categorical data into
+a format suitable for machine learning algorithms? Justify your answer.
+Ans:
+For this scenario, you would likely use one-hot encoding. One-hot encoding creates binary columns for each unique category within a categorical feature. Since "species," "habitat," and "diet" are not ordinal and don't have any inherent numeric relationships, one-hot encoding ensures that the machine learning algorithm doesn't misinterpret the encoded values as having meaningful order or magnitude.
+___________________________________________________________________________________________________________________________________________
+
+Q7.You are working on a project that involves predicting customer churn for a telecommunications
+company. You have a dataset with 5 features, including the customer's gender, age, contract type,
+monthly charges, and tenure. Which encoding technique(s) would you use to transform the categorical
+data into numerical data? Provide a step-by-step explanation of how you would implement the encoding.
+Gender Encoding:
+Ans: 
+If gender has categories "Male" and "Female," you can encode them as:
+
+Male: 0
+Female: 1
+Contract Type Encoding:
+If contract types are "Monthly," "One year," and "Two year," you can encode them as:
+
+Monthly: 0
+One year: 1
+Two year: 2
+By using nominal encoding, you convert the categorical values into numerical format, making them suitable for machine learning algorithms.
