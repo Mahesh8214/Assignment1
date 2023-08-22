@@ -1,0 +1,79 @@
+Q1. What are the key features of the wine quality data set? Discuss the importance of each feature in
+predicting the quality of wine.
+Ans:
+    The wine quality dataset typically includes features such as:
+    
+    Fixed acidity
+    Volatile acidity
+    Citric acid
+    Residual sugar
+    Chlorides
+    Free sulfur dioxide
+    Total sulfur dioxide
+    Density
+    pH
+    Sulphates
+    Alcohol
+    Each feature represents various chemical and physical properties of the wine.
+    These features are important as they influence the quality of wine. For instance:
+    
+    Acidity levels affect the wine's taste and stability.
+    Sulfur dioxide levels impact wine preservation.
+    Alcohol content can contribute to wine's flavor and overall quality.
+________________________________________________________________________________________________________________________________
+
+Q2. How did you handle missing data in the wine quality data set during the feature engineering process?
+Discuss the advantages and disadvantages of different imputation techniques.
+Ans:
+    Different imputation techniques can be used to handle missing data:
+
+    Mean/Median Imputation: Replace missing values with the mean or median of the feature. Advantage: Simple. 
+    
+    Disadvantage: Can distort the distribution if missingness is not random.
+    Forward/Backward Fill: Propagate the last known value forward or backward.
+    
+    Advantage: Applicable to time series data. Disadvantage: Assumes continuity.
+    Model-Based Imputation: Use regression models to predict missing values based on other variables. Advantage:
+    Accounts for relationships. Disadvantage: Requires a good model.
+________________________________________________________________________________________________________________________________
+Q3. What are the key factors that affect students' performance in exams? How would you go about
+analyzing these factors using statistical techniques?
+Ans:
+    Factors might include study time, attendance, socioeconomic status, parental education, teacher quality, etc. To analyze these factors:
+    
+    Use correlation analysis to identify relationships.
+    Perform ANOVA or t-tests to compare groups.
+    Conduct regression analysis to predict performance based on variables.
+________________________________________________________________________________________________________________________________
+Q3. What are the key factors that affect students' performance in exams? How would you go about
+analyzing these factors using statistical techniques?
+Ans:
+    Feature engineering involves creating new features or transforming existing ones. For example:
+    
+    Combining features (e.g., creating a 'total score' variable).
+    Creating categorical bins for numerical variables.
+    One-hot encoding categorical variables.
+    Scaling numerical features (e.g., using Z-score normalization).
+________________________________________________________________________________________________________________________________
+
+Q5. Load the wine quality data set and perform exploratory data analysis (EDA) to identify the distribution
+of each feature. Which feature(s) exhibit non-normality, and what transformations could be applied to
+these features to improve normality?
+Ans:
+    You can use visualizations like histograms, box plots, and scatter plots to explore feature distributions,
+    identify outliers, and examine relationships between variables. Non-normality in features can be addressed
+    by applying transformations like log transformation or Box-Cox transformation.
+________________________________________________________________________________________________________________________________
+
+Q6. Using the wine quality data set, perform principal component analysis (PCA) to reduce the number of
+features. What is the minimum number of principal components required to explain 90% of the variance in
+the data?
+Ans:
+    PCA reduces dimensionality while preserving most of the variance. To find the minimum number of principal components explaining 90% variance:
+    
+    Perform PCA.
+    Calculate cumulative explained variance ratio.
+    Identify the component count where the cumulative variance crosses 90%.
+    Keep in mind that the specifics of implementing these steps can vary depending on the tools and libraries you are using, the nature of the dataset, and the goals of your analysis.
+________________________________________________________________________________________________________________________________
+
