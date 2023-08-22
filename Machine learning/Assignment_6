@@ -24,27 +24,40 @@ ________________________________________________________________________________
 
 Q3. Define covariance and explain why it is important in statistical analysis. How is covariance calculated?
 Ans:
+Covariance measures the degree to which two variables change together. It's important because it helps understand relationships between variables. Positive covariance indicates direct relationship, negative indicates inverse, and zero indicates no linear relationship.
+
 The formula for covariance is given by:
-
-\[ \text{cov}(X, Y) = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y}) \]
-
-Where:
-- \( X \) and \( Y \) are the two random variables.
-- \( n \) is the number of data points.
-- \( x_i \) and \( y_i \) are the individual data points for \( X \) and \( Y \) respectively.
-- \( \bar{x} \) and \( \bar{y} \) are the means of \( X \) and \( Y \) respectively.
-
-_________________________________________________________________________________________________________________________________
+cov(x , y) = sumission of  i (Xi - x)(Yi - y)/n-1
+_______________________________________________________________________________________________________________________________
 
 Q4. For a dataset with the following categorical variables: Color (red, green, blue), Size (small, medium,
 large), and Material (wood, metal, plastic), perform label encoding using Python's scikit-learn library.
 Show your code and explain the output.
 Ans:
+        from sklearn.preprocessing import LabelEncoder
+        
+        data = {
+            'Color': ['red', 'green', 'blue', 'green', 'red'],
+            'Size': ['small', 'medium', 'large', 'medium', 'small'],
+            'Material': ['wood', 'metal', 'plastic', 'wood', 'plastic']
+        }
+        
+        df = pd.DataFrame(data)
+        
+        encoder = LabelEncoder()
+        
+        encoded_df = df.apply(encoder.fit_transform)
+        print(encoded_df)
+
 _________________________________________________________________________________________________________________________________
 
 Q5. Calculate the covariance matrix for the following variables in a dataset: Age, Income, and Education
 level. Interpret the results.
 Ans:
+    
+    cov_matrix = df[['Age', 'Income', 'Education Level']].cov()
+    print(cov_matrix)
+
 _________________________________________________________________________________________________________________________________
 
 Q6. You are working on a machine learning project with a dataset containing several categorical
@@ -52,10 +65,22 @@ variables, including "Gender" (Male/Female), "Education Level" (High School/Bach
 and "Employment Status" (Unemployed/Part-Time/Full-Time). Which encoding method would you use for
 each variable, and why?
 Ans:
+    Gender: Label Encoding (Binary variable, no order)
+    Education Level: Ordinal Encoding (Clear hierarchy)
+    Employment Status: One-Hot Encoding (No inherent order)
 _________________________________________________________________________________________________________________________________
 
 Q7. You are analyzing a dataset with two continuous variables, "Temperature" and "Humidity", and two
 categorical variables, "Weather Condition" (Sunny/Cloudy/Rainy) and "Wind Direction" (North/South/
 East/West). Calculate the covariance between each pair of variables and interpret the results.
 Ans:
+    cov_matrix = df[['Temperature', 'Humidity']].cov()
+    print(cov_matrix)
+    
+    innterpretation:
+
+    Positive covariance between Temperature and Humidity suggests they tend to increase together.
+    Covariance's magnitude depends on the scales of variables.
+    Categorical variables (Weather Condition and Wind Direction) are not included in the covariance calculation.
+
 _________________________________________________________________________________________________________________________________
