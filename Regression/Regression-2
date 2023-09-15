@@ -21,14 +21,14 @@ Q2. Define adjusted R-squared and explain how it differs from the regular R-squa
 ___________________________________________________________________________________________________________________________________ 
 Q3. When is it more appropriate to use adjusted R-squared?
 
-   - Adjusted R-squared is more appropriate when comparing models with different numbers of predictors. It helps prevent overfitting by penalizing the inclusion of unnecessary variables. Use it when you want to strike a balance between model complexity and goodness-of-fit.
+   - Adjusted R-squared is more appropriate when comparing models with different numbers of predictors. It helps prevent overfitting by          penalizing the inclusion of unnecessary variables. Use it when you want to strike a balance between model complexity and goodness-of-       fit.
 
 ____________________________________________________________________________________________________________________________________ 
 Q4. RMSE, MSE, and MAE in Regression Analysis:
 
-   - RMSE (Root Mean Squared Error), MSE (Mean Squared Error), and MAE (Mean Absolute Error) are evaluation metrics in regression analysis used to measure the accuracy of predicted values compared to actual values:
+   - RMSE (Root Mean Squared Error), MSE (Mean Squared Error), and MAE (Mean Absolute Error) are evaluation metrics in regression analysis       used to measure the accuracy of predicted values compared to actual values:
 
-     - RMSE: RMSE calculates the square root of the average of squared differences between predicted and actual values. It gives higher weight to large errors.
+     - RMSE: RMSE calculates the square root of the average of squared differences between predicted and actual values. It gives higher            weight to large errors.
    
      - MSE: MSE calculates the average of squared differences between predicted and actual values. It penalizes large errors.
    
@@ -38,15 +38,51 @@ ________________________________________________________________________________
 Q5. Discuss the advantages and disadvantages of using RMSE, MSE, and MAE as evaluation metrics in
 regression analysis.
 
-   - Advantages:
-     - RMSE and MSE give more weight to larger errors, which can be important in some applications.
-     - RMSE and MSE are commonly used in optimization since they penalize large errors.
-     - MAE is easy to interpret and less sensitive to outliers.
+ 
+Advantages of RMSE (Root Mean Squared Error) as an Evaluation Metric:
 
-   - Disadvantages:
-     - RMSE and MSE can be sensitive to outliers and may not represent the overall error accurately.
-     - MAE does not penalize large errors as heavily as RMSE and MSE.
-     - Choice of metric depends on the specific problem and error distribution.
+   Sensitive to Large Errors: RMSE gives higher weight to larger errors, making it suitable for applications where large errors are costly     or impactful. It emphasizes the importance of reducing significant prediction errors.
+
+   Differentiable: RMSE is a differentiable metric, making it compatible with optimization techniques like gradient descent, which is          commonly used in model training.
+
+Similar Unit to Dependent Variable: RMSE has the same unit as the dependent variable, which makes it interpretable in the context of the problem. This can be helpful in understanding the practical significance of prediction errors.
+
+-Disadvantages of RMSE:
+
+   Sensitivity to Outliers: RMSE can be sensitive to outliers or extreme values in the dataset. A single outlier can disproportionately 
+   increase the RMSE and skew the evaluation.
+   
+   Lack of Robustness: RMSE is not robust when the error distribution is not normally distributed. In cases with non-Gaussian error 
+   distributions, alternative metrics may be more appropriate.
+
+-Advantages of MSE (Mean Squared Error) as an Evaluation Metric:
+
+   Smoothness and Differentiability: Like RMSE, MSE is smooth and differentiable, which is advantageous when using optimization algorithms     to train models.
+
+Mathematical Simplicity: MSE has a simple mathematical form, making it easy to compute and understand.
+
+-Disadvantages of MSE:
+
+   Units Squared: The unit of MSE is the square of the unit of the dependent variable, which can make it less interpretable than RMSE. For 
+   example, if the dependent variable is in dollars, the MSE is in square dollars.
+   
+   Outlier Sensitivity: Similar to RMSE, MSE is sensitive to outliers, and a single outlier can have a significant impact on the metric.
+
+-Advantages of MAE (Mean Absolute Error) as an Evaluation Metric:
+
+   Robustness to Outliers: MAE is more robust to outliers compared to RMSE and MSE because it uses absolute differences. It gives equal 
+   weight to all errors regardless of their magnitude.
+   
+   Interpretability: MAE is highly interpretable because it represents the average absolute error between predicted and actual values, 
+   directly in the same units as the dependent variable.
+
+-Disadvantages of MAE:
+
+   Less Sensitivity to Large Errors: While robust to outliers, MAE does not give higher weight to larger errors. It may not be suitable for 
+   applications where large errors are more critical.
+
+   Non-Differentiability at Zero: MAE is not differentiable at zero error, which can be a limitation in optimization problems that require 
+   gradient-based methods.
 
  ___________________________________________________________________________________________________________________________________ 
 Q6. Explain the concept of Lasso regularization. How does it differ from Ridge regularization, and when is it more appropriate to use?
