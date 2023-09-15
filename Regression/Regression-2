@@ -13,10 +13,10 @@ Q2. Define adjusted R-squared and explain how it differs from the regular R-squa
    - Adjusted R-squared is a modified version of R-squared that accounts for the number of independent variables in the model. It penalizes the inclusion of unnecessary predictors that do not significantly improve the model's fit. Adjusted R-squared increases only when adding a new predictor genuinely improves the model.
 
    - The formula for adjusted R-squared is: 
-     \[
-ight)	ext{Adjusted R-squared} = 1 - \left(rac{(1 - R^2)(n - 1)}{n - k - 1}
-     \]
-     where n is the number of data points and k is the number of predictors.
+
+    1-(1- score) *(len(y_test) - 1)/(len(y_test) - x_test - 1)
+
+    where n is the number of data points and k is the number of predictors.
 
 ___________________________________________________________________________________________________________________________________ 
 Q3. When is it more appropriate to use adjusted R-squared?
