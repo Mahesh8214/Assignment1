@@ -21,7 +21,7 @@ ________________________________________________________________________________
 
 Q5. Can Lasso Regression be used for non-linear regression problems? If yes, how?
 
-Lasso Regression is inherently a linear model, so it may not capture complex non-linear relationships in the data. To use Lasso for non-linear regression, you can consider transforming the input features or using non-linear transformations of the data to make it more amenable to a linear model. Alternatively, you can explore other non-linear regression techniques like polynomial regression or kernel-based methods.
+Lasso Regression is inherently a linear model, so it may not capture complex non-linear relationships in the data. To use Lasso for non-linear regression, we can consider transforming the input features or using non-linear transformations of the data to make it more amenable to a linear model. Alternatively, you can explore other non-linear regression techniques like polynomial regression or kernel-based methods.
 _____________________________________________________________________________________________________________________________________
 
 Q6. What is the difference between Ridge Regression and Lasso Regression?
@@ -39,5 +39,5 @@ ________________________________________________________________________________
 
 Q8. How do you choose the optimal value of the regularization parameter (lambda) in Lasso Regression?
 
-The optimal value of the regularization parameter lambda in Lasso Regression is typically selected through techniques like cross-validation. You try different values of lambda and choose the one that minimizes a validation metric (e.g., mean squared error) on a hold-out dataset. Cross-validation helps you find the lambda that balances model complexity and bias for your specific dataset.
+The optimal value of the regularization parameter lambda in Lasso Regression is typically selected through techniques like cross-validation. we can try different values of lambda and choose the one that minimizes a validation metric (e.g., mean squared error) on a hold-out dataset. Cross-validation helps you find the lambda that balances model complexity and bias for your specific dataset.
 _____________________________________________________________________________________________________________________________________
