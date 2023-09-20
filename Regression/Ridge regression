@@ -1,0 +1,57 @@
+Q1. What is Ridge Regression, and how does it differ from ordinary least squares regression?
+
+Ridge Regression is a linear regression technique that extends ordinary least squares (OLS) regression by adding a penalty term (L2 regularization) to the cost function. The key differences are:
+
+Ridge Regression adds a penalty term to the cost function to prevent large coefficients and reduce overfitting.
+OLS aims to minimize the sum of squared residuals without regularization.
+Ridge Regression helps mitigate multicollinearity and improves the stability of coefficient estimates.
+
+_________________________________________________________________________________________________________________________________
+Q2. What are the assumptions of Ridge Regression?
+
+The assumptions of Ridge Regression are similar to those of linear regression:
+
+Linearity: The relationship between the dependent variable and the independent variables is assumed to be linear.
+
+Independence: The observations are assumed to be independent of each other.
+
+Homoscedasticity: The variance of the error terms is constant across all levels of the independent variables.
+
+Multicollinearity: While Ridge Regression can handle multicollinearity, it assumes that multicollinearity is present in the dataset.
+
+
+_________________________________________________________________________________________________________________________________
+
+Q3. How do you select the value of the tuning parameter (lambda) in Ridge Regression?
+
+The value of the tuning parameter (λ or alpha) in Ridge Regression is typically selected through techniques like cross-validation. You try different values of λ and choose the one that minimizes the validation error (e.g., mean squared error) on a hold-out dataset. This process helps you find the optimal trade-off between model complexity and bias.
+_________________________________________________________________________________________________________________________________
+
+Q4. Can Ridge Regression be used for feature selection? If yes, how?
+
+Ridge Regression is not primarily used for feature selection because it does not set coefficients exactly to zero. However, it can shrink coefficients close to zero, effectively reducing the impact of less important predictors. If our goal is aggressive feature selection, Lasso Regression (L1 regularization) is a better choice.
+
+_________________________________________________________________________________________________________________________________
+
+Q5. How does the Ridge Regression model perform in the presence of multicollinearity?
+
+Ridge Regression is effective in handling multicollinearity. It reduces the impact of correlated predictors by shrinking their coefficients. This improves the stability of coefficient estimates and reduces the risk of overfitting compared to OLS regression.
+
+
+_________________________________________________________________________________________________________________________________
+
+Q6. Can Ridge Regression handle both categorical and continuous independent variables?
+
+Yes, Ridge Regression can handle both categorical and continuous independent variables. However, categorical variables may need to be converted into numerical format (e.g., one-hot encoding) before applying Ridge Regression.
+
+
+_________________________________________________________________________________________________________________________________
+Q7. How do you interpret the coefficients of Ridge Regression?
+
+Interpreting Ridge Regression coefficients is similar to interpreting coefficients in linear regression. Each coefficient represents the change in the dependent variable for a one-unit change in the corresponding independent variable, assuming all other variables are held constant. However, the coefficients are affected by the Ridge penalty, which shrinks them toward zero.
+
+_________________________________________________________________________________________________________________________________
+Q8. Can Ridge Regression be used for time-series data analysis? If yes, how?
+
+Ridge Regression is less commonly used for time-series data analysis compared to other techniques like autoregressive models. However, it can be applied to time-series data by treating time-dependent variables as independent variables in the regression model. It may require additional considerations, such as handling seasonality and autocorrelation, which are common in time-series data. Other time-series-specific techniques may be more suitable in many cases.
+_________________________________________________________________________________________________________________________________
