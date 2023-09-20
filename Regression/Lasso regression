@@ -1,0 +1,43 @@
+_____________________________________________________________________________________________________________________________________
+Q1. What is Lasso Regression, and how does it differ from other regression techniques?
+
+Lasso Regression is a linear regression technique that adds an L1 regularization penalty to the cost function. It differs from other regression techniques by performing feature selection and shrinking some coefficients to exactly zero. This makes it particularly useful when dealing with high-dimensional datasets with many irrelevant features.
+_____________________________________________________________________________________________________________________________________
+
+Q2. What is the main advantage of using Lasso Regression in feature selection?
+
+The main advantage of Lasso Regression in feature selection is its ability to automatically select the most important features by setting some coefficients to zero. This leads to a simpler and more interpretable model while effectively eliminating less important predictors.
+_____________________________________________________________________________________________________________________________________
+
+Q3. How do you interpret the coefficients of a Lasso Regression model?
+
+Interpreting the coefficients in a Lasso Regression model is similar to interpreting coefficients in linear regression. Each coefficient represents the change in the dependent variable for a one-unit change in the corresponding independent variable, assuming all other variables are held constant. However, in Lasso Regression, some coefficients may be exactly zero, indicating that those features have been excluded from the model.
+_____________________________________________________________________________________________________________________________________
+
+Q4. What are the tuning parameters that can be adjusted in Lasso Regression, and how do they affect the model's performance?
+
+In Lasso Regression, the main tuning parameter is the regularization strength (lambda or alpha). It controls the trade-off between model complexity and bias. As lambda increases, the model becomes simpler with more coefficients set to zero, reducing overfitting but potentially increasing bias. Lower values of lambda allow more features to be included, increasing model complexity.
+_____________________________________________________________________________________________________________________________________
+
+Q5. Can Lasso Regression be used for non-linear regression problems? If yes, how?
+
+Lasso Regression is inherently a linear model, so it may not capture complex non-linear relationships in the data. To use Lasso for non-linear regression, you can consider transforming the input features or using non-linear transformations of the data to make it more amenable to a linear model. Alternatively, you can explore other non-linear regression techniques like polynomial regression or kernel-based methods.
+_____________________________________________________________________________________________________________________________________
+
+Q6. What is the difference between Ridge Regression and Lasso Regression?
+
+The main difference between Ridge and Lasso Regression is the type of regularization used:
+
+Ridge Regression uses L2 regularization, which adds the square of the coefficients to the cost function. It discourages large coefficients and mitigates multicollinearity but does not perform feature selection.
+Lasso Regression uses L1 regularization, which adds the absolute value of the coefficients to the cost function. It encourages some coefficients to be exactly zero, performing feature selection and simplifying the model.
+_____________________________________________________________________________________________________________________________________
+
+Q7. Can Lasso Regression handle multicollinearity in the input features? If yes, how?
+
+Yes, Lasso Regression can handle multicollinearity by reducing the impact of correlated features. It does this by shrinking some coefficients to zero, effectively selecting one feature from a group of highly correlated features. This helps in addressing multicollinearity and improving the stability of coefficient estimates.
+_____________________________________________________________________________________________________________________________________
+
+Q8. How do you choose the optimal value of the regularization parameter (lambda) in Lasso Regression?
+
+The optimal value of the regularization parameter lambda in Lasso Regression is typically selected through techniques like cross-validation. You try different values of lambda and choose the one that minimizes a validation metric (e.g., mean squared error) on a hold-out dataset. Cross-validation helps you find the lambda that balances model complexity and bias for your specific dataset.
+_____________________________________________________________________________________________________________________________________
