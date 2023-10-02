@@ -1,0 +1,75 @@
+_______________________________________________________________________________________________________________________________
+
+Q1. Explain the difference between linear regression and logistic regression models. Provide an example of a scenario where
+logistic regression would be more appropriate.
+Ans:
+    -Linear Regression: It's used for predicting a continuous outcome. For instance, you might use linear regression to predict 
+     the price of a house based on features like square footage, number of bedrooms, etc.
+    
+    -Logistic Regression: This model is employed for binary classification problems where the outcome is categorical with two 
+    classes (0 or 1). For example, predicting whether an email is spam (1) or not (0).
+
+Q2. What is the cost function used in logistic regression, and how is it optimized?
+Ans:
+    Cost Function (Log Loss): Logistic regression uses log loss (cross-entropy) as its cost function.
+    It measures the difference between predicted probabilities and actual outcomes.
+    
+    Optimization: The objective is to minimize the cost function. This is often achieved through optimization
+    algorithms such as Gradient Descent, which iteratively adjusts model parameters to minimize the cost.
+
+_______________________________________________________________________________________________________________________________
+
+Q3. Explain the concept of regularization in logistic regression and how it helps prevent overfitting.
+Ans:
+    Regularization: It involves introducing penalty terms for large coefficients in the model. 
+    This is done to prevent overfitting, where the model becomes too tailored to the training data.
+    
+    Types: L1 regularization (Lasso) encourages sparse coefficients (some coefficients become exactly zero),
+    and L2 regularization (Ridge) penalizes large coefficients.
+
+_______________________________________________________________________________________________________________________________
+
+Q4. What is the ROC curve, and how is it used to evaluate the performance of the logistic regression model?
+Ans:
+    ROC Curve: The Receiver Operating Characteristic (ROC) curve is a graphical representation of the trade-off 
+               between true positive rate (sensitivity) and false positive rate (1-specificity).
+    
+    AUC (Area Under the Curve): The AUC is a single value representing the area under the ROC curve. 
+               Higher AUC indicates better discrimination between the two classes.
+
+_______________________________________________________________________________________________________________________________
+
+Q5. What are some common techniques for feature selection in logistic regression? How do these techniques help improve the model's performance?
+Ans:
+    Recursive Feature Elimination (RFE): This method iteratively removes the least important features until the 
+                                         optimal set of features is reached.
+    
+    L1 Regularization (Lasso): Lasso penalizes some coefficients to become exactly zero, effectively performing feature selection.
+    
+    Feature Importance from Trees (e.g., Random Forest): Techniques like Random Forest can provide insights into the importance of each feature.
+    
+    Feature selection helps in reducing model complexity, improving interpretability, and potentially enhancing the model's
+    generalization to new data.
+
+_______________________________________________________________________________________________________________________________
+
+Q6. How can you handle imbalanced datasets in logistic regression? What are some strategies for dealing with class imbalance?
+Ans:
+    Balancing Classes: Techniques like upsampling the minority class or downsampling the majority class can be employed to balance class distribution.
+    
+    Different Evaluation Metrics: Instead of relying solely on accuracy, metrics like precision, recall, F1 score, or area under the 
+    precision-recall curve can provide a more nuanced evaluation.
+    
+    Synthetic Data Generation: Techniques like SMOTE (Synthetic Minority Over-sampling Technique) can be used to generate 
+    synthetic samples for the minority class.
+
+_______________________________________________________________________________________________________________________________
+
+Q7. Can you discuss some common issues and challenges that may arise when implementing logistic regression, and how they can be addressed? For example, what can be done
+    if there is multicollinearity among the independent variables?
+Ans:
+    Multicollinearity: When independent variables are highly correlated, it can lead to unstable coefficient estimates. Address this by removing or combining highly correlated features.
+    
+    Outliers: Outliers can disproportionately influence the model. Identify and handle outliers appropriately, possibly through transformations or imputation.
+    
+    Non-linearity: If relationships between independent and dependent variables are not linear, consider incorporating polynomial features or exploring other non-linear transformations.
