@@ -1,0 +1,54 @@
+Q1. What is hierarchical clustering, and how is it different from other clustering techniques?
+- Answer:
+  - Hierarchical clustering is a method that creates a tree of clusters, either by merging or splitting them.
+  - It differs from other techniques in that it forms a hierarchy of clusters, allowing for exploration at different granularity levels.
+
+_____________________________________________________________
+
+Q2. What are the two main types of hierarchical clustering algorithms? Describe each in brief.
+- Answer:
+  - Agglomerative Hierarchical Clustering: Starts with individual data points as clusters and merges them iteratively based on similarity.
+  - Divisive Hierarchical Clustering: Starts with all data points in one cluster and splits them based on dissimilarity.
+
+_____________________________________________________________
+
+Q3. How do you determine the distance between two clusters in hierarchical clustering, and what are the common distance metrics used?
+- Answer:
+  - Distance can be measured using various metrics such as Euclidean distance, Manhattan distance, or cosine similarity.
+  - Common distance metrics include:
+    - Euclidean Distance
+    - Manhattan Distance
+    - Cosine Similarity
+    - Jaccard Distance
+
+_____________________________________________________________
+
+Q4. How do you determine the optimal number of clusters in hierarchical clustering, and what are some common methods used for this purpose?
+- Answer:
+  - Methods include:
+    - Visual Inspection of Dendrogram: Identify the level at which the tree has the best balance.
+    - Gap Statistics: Compare clustering performance to a random distribution.
+    - Silhouette Score: Evaluate how well-separated clusters are.
+    - Cophenetic Correlation Coefficient: Measure how faithfully a dendrogram preserves pairwise distances.
+
+_____________________________________________________________
+
+Q5. What are dendrograms in hierarchical clustering, and how are they useful in analyzing the results?
+- Answer:
+  - Dendrograms are tree diagrams illustrating the arrangement of clusters.
+  - Useful in analyzing results by visually identifying clusters, their relationships, and the optimal number of clusters.
+
+_____________________________________________________________
+
+Q6. Can hierarchical clustering be used for both numerical and categorical data? If yes, how are the distance metrics different for each type of data?
+- Answer:
+  - Yes, hierarchical clustering can handle both types of data.
+  - For numerical data, distance metrics like Euclidean or Manhattan are common.
+  - For categorical data, methods like Gower's distance or Jaccard distance are more appropriate.
+
+_____________________________________________________________
+
+Q7. How can you use hierarchical clustering to identify outliers or anomalies in your data?
+- Answer:
+  - Outliers can be identified as individual data points or small clusters separated from the main hierarchy.
+  - Examining branches with a small number of data points or large distances may reveal potential outliers. 
