@@ -1,0 +1,91 @@
+ Q1. What is a time series, and what are some common applications of time series analysis?
+- A time series is a sequence of data points collected or recorded over time, typically at equally spaced intervals. 
+Time series analysis involves studying patterns, trends, and behaviors within the data. Common applications include stock price prediction, 
+weather forecasting, sales forecasting, and economic trend analysis.
+
+_____________________________________________________________
+
+Q2. What are some common time series patterns, and how can they be identified and interpreted?
+- Common patterns include trend, seasonality, and cyclicality. Trends indicate a long-term movement in data, seasonality 
+reflects recurring patterns, and cyclicality involves repetitive but non-fixed cycles. Patterns can be identified using 
+visualization techniques, such as plotting the data or decomposing it into trend and seasonality components.
+
+_____________________________________________________________
+
+Q3. How can time series data be preprocessed before applying analysis techniques?
+- Time series data preprocessing involves handling missing values, handling outliers, and ensuring the data is at a
+consistent frequency. Techniques include imputation for missing values, outlier detection and removal, and resampling 
+to ensure uniform intervals. This ensures the data is ready for analysis.
+
+python
+# Example: Handling missing values in time series data using pandas
+df['column_name'].fillna(method='ffill', inplace=True)
+
+
+_____________________________________________________________
+
+Q4. How can time series forecasting be used in business decision-making, and what are some common challenges and limitations?
+- Time series forecasting aids businesses in predicting future trends, optimizing inventory, and making informed decisions. 
+Challenges include dealing with noisy data, capturing complex patterns, and adapting to sudden changes. Limitations involve 
+uncertainties and the assumption that historical patterns will continue.
+
+_____________________________________________________________
+
+Q5. What is ARIMA modelling, and how can it be used to forecast time series data?
+- ARIMA (AutoRegressive Integrated Moving Average) is a popular time series forecasting method that combines autoregression,
+differencing, and moving averages. It models the relationship between an observation and its lagged values. ARIMA is effective 
+for stationary time series data and can be used for short to medium-term forecasting.
+
+python
+# Example: Using ARIMA in Python with statsmodels
+from statsmodels.tsa.arima.model import ARIMA
+model = ARIMA(data, order=(p, d, q))
+result = model.fit()
+
+_____________________________________________________________
+
+Q6. How do Autocorrelation Function (ACF) and Partial Autocorrelation Function (PACF) plots help in identifying the order of ARIMA models?
+- ACF and PACF plots show the correlation between a time series and its lagged values. Peaks in the ACF plot indicate the order 
+of the moving average (MA) component, while PACF plot peaks indicate the autoregressive (AR) component order. 
+These plots help determine the p, d, and q parameters for ARIMA models.
+
+python
+# Example: Plotting ACF and PACF using statsmodels
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+plot_acf(data)
+plot_pacf(data)
+
+
+_____________________________________________________________
+
+Q7. What are the assumptions of ARIMA models, and how can they be tested for in practice?
+- ARIMA assumes stationarity, meaning mean and variance are constant over time. This can be tested using statistical tests 
+like the Augmented Dickey-Fuller (ADF) test. Additionally, the residuals of the model should be independent and normally distributed.
+
+python
+# Example: Conducting Augmented Dickey-Fuller test using statsmodels
+from statsmodels.tsa.stattools import adfuller
+result = adfuller(data)
+
+
+_____________________________________________________________
+
+Q8. Suppose you have monthly sales data for a retail store for the past three years. Which type of time series model would 
+
+you recommend for forecasting future sales, and why?
+- The choice depends on the characteristics of the data. If there's a clear trend and seasonality, ARIMA may be suitable. 
+If the data exhibits non-linear patterns, machine learning models like LSTM (Long Short-Term Memory) or Prophet could be considered.
+Proper analysis and testing, including evaluating different models, are essential.
+
+_____________________________________________________________
+
+Q9. What are some of the limitations of time series analysis? Provide an example of a scenario where the limitations of time series 
+analysis may be particularly relevant.
+- Time series analysis assumes that future patterns will resemble past patterns, making it challenging in scenarios with sudden, 
+unforeseen changes. For example, during a global pandemic, consumer behavior and sales patterns may deviate significantly from 
+historical trends, limiting the accuracy of time series forecasts.
+
+_____________________________________________________________
+
+Q10. Explain the difference between a stationary and non-stationary time series. How does the stationarity of a time series affect the choice of forecasting model?
+- A stationary time series has constant mean and variance over time, while a non-stationary series exhibits trends or seasonality. Stationarity is crucial for ARIMA models, which assume a stable statistical structure. Non-stationary series may require differencing to achieve stationarity before applying ARIMA, emphasizing the importance of understanding and transforming the data appropriately.
