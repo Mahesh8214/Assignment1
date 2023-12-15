@@ -1,0 +1,97 @@
+Q1. What is the role of feature selection in anomaly detection?
+- Feature selection is pivotal in anomaly detection for several reasons.
+Irrelevant or redundant features can introduce noise and hinder the algorithm's ability to distinguish anomalies from normal instances.
+By selecting relevant features, the algorithm becomes more efficient, and the model's performance improves. This process is crucial for 
+enhancing the anomaly detection model's interpretability and reducing computational complexity.
+
+python
+# Example: Feature selection using scikit-learn
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import chi2
+
+# Assuming X contains features and y contains labels (normal or anomaly)
+X_selected = SelectKBest(chi2, k=5).fit_transform(X, y)
+
+
+_____________________________________________________________
+
+Q2. What are some common evaluation metrics for anomaly detection algorithms and how are they computed?
+- Common metrics include precision, recall, F1-score, area under the Receiver Operating Characteristic (ROC) curve, 
+and area under the Precision-Recall curve. Precision measures the accuracy of detected anomalies, recall captures
+the proportion of actual anomalies identified, and F1-score balances the two. ROC and Precision-Recall curves provide graphical representations of model performance.
+
+python
+# Example: Computing precision and recall using scikit-learn
+from sklearn.metrics import precision_score, recall_score
+
+precision = precision_score(y_true, y_pred)
+recall = recall_score(y_true, y_pred)
+
+
+_____________________________________________________________
+
+Q3. What is DBSCAN and how does it work for clustering?
+- DBSCAN is a density-based clustering algorithm that groups data points based on their density in the feature space.
+It defines clusters as dense regions separated by sparser areas. DBSCAN classifies points as core, border, or noise points, 
+making it robust to various cluster shapes and sizes.
+
+python
+# Example: Using DBSCAN in scikit-learn
+from sklearn.cluster import DBSCAN
+
+dbscan = DBSCAN(eps=0.5, min_samples=5)
+labels = dbscan.fit_predict(X)
+
+
+_____________________________________________________________
+
+Q4. How does the epsilon parameter affect the performance of DBSCAN in detecting anomalies?
+- The epsilon parameter in DBSCAN sets the radius around each data point. Increasing epsilon can merge nearby clusters,
+potentially grouping anomalies with normal instances. On the contrary, decreasing epsilon might separate clusters, making 
+the algorithm more sensitive to outliers and improving its ability to detect anomalies.
+
+python
+# Example: Modifying epsilon in scikit-learn DBSCAN
+dbscan = DBSCAN(eps=0.7, min_samples=5)
+
+
+_____________________________________________________________
+
+Q5. What are the differences between the core, border, and noise points in DBSCAN, and how do they relate to anomaly detection?
+- Core points have a sufficient number of neighbors within epsilon and are central to a cluster. Border points have fewer neighbors 
+and lie on the outskirts of a cluster, while noise points have insufficient neighbors. Anomalies are often noise points or border points 
+in low-density areas, making their identification integral to anomaly detection.
+
+python
+# Example: Extracting core, border, and noise points from DBSCAN labels
+core_samples_mask = np.zeros_like(dbscan.labels_, dtype=bool)
+core_samples_mask[dbscan.core_sample_indices_] = True
+
+
+_____________________________________________________________
+
+Q6. How does DBSCAN detect anomalies and what are the key parameters involved in the process?
+- DBSCAN detects anomalies as noise points—those with insufficient neighbors to form a dense cluster.
+The key parameters include epsilon (radius) and min_samples (minimum neighbors) needed to classify a point as a core point.
+Anomalies are often points classified as noise in areas with low data density.
+
+python
+# Example: Identifying anomalies in DBSCAN results
+anomalies = X[dbscan.labels_ == -1]
+
+
+_____________________________________________________________
+
+Q7. What is the make_circles package in scikit-learn used for?
+- make_circles is a function in scikit-learn that generates a dataset with two features arranged in concentric circles. 
+It is commonly used for testing and visualizing clustering and classification algorithms, especially those that struggle 
+with linearly separable data.
+
+python
+# Example: Generating a dataset with concentric circles using scikit-learn
+from sklearn.datasets import make_circles
+
+X, y = make_circles(n_samples=100, factor=0.5, noise=0.1)
+
+
+_____________________________________________________________
